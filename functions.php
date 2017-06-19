@@ -109,7 +109,7 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.css' ); // бутстрап
 		wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
 		wp_enqueue_style( 'custom', get_template_directory_uri().'/css/styles.css' ); // кастомные стили
-		wp_enqueue_style( 'google', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic' ); // google шрифт
+		wp_enqueue_style( 'google', 'https://fonts.googleapis.com/css?family=Exo+2:300,400,400i,500,500i,600,600i,700,700i&amp;subset=cyrillic' ); // google шрифт
 	}
 }
 

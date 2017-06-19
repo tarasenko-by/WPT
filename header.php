@@ -26,11 +26,24 @@
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
 <body <?php body_class(); // все классы для body ?>>
-	<header>
+
+
+<header class="container-fluid">
+	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<nav class="navbar navbar-default">
+				<div class="col-sm-4 logotype">
+					<a href="/">
+						<strong>
+							<?php bloginfo('name'); ?>
+						</strong> 
+						<!-- <span>
+							<?php bloginfo('description'); ?>
+						</span> -->
+					</a>
+				</div>
+				<div class="col-sm-8 text-right">
+					<nav class="navbar">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnav" aria-expanded="false">
 								<span class="sr-only">Меню</span>
@@ -39,13 +52,13 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div class="collapse navbar-collapse" id="topnav">
+						<div class="collapse navbar-collapse " id="topnav">
 							<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 								'theme_location' => 'top', // идентификатор меню, определен в register_nav_menus() в functions.php
 								'container'=> false, // обертка списка, тут не нужна
 						  		'menu_id' => 'top-nav-ul', // id для ul
 						  		'items_wrap' => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>',
-								'menu_class' => 'top-menu', // класс для ul, первые 2 обязательны
+								'menu_class' => 'top-menu navbar-right', // класс для ul, первые 2 обязательны
 						  		'walker' => new bootstrap_menu(true) // верхнее меню выводится по разметке бутсрапа, см класс в functions.php, если по наведению субменю не раскрывать то передайте false		  		
 					  			);
 								wp_nav_menu($args); // выводим верхнее меню
@@ -55,4 +68,5 @@
 				</div>
 			</div>
 		</div>
-	</header>
+	</div>
+</header>
