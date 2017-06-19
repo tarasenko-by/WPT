@@ -23,5 +23,17 @@
 		</div>
 	</footer>
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
+
+
+<script type="text/javascript">
+	jQuery(function($){
+		$.get('/wp-content/themes/WPT/images/icons.svg', function(data) {
+			var div = document.createElement("div");
+			div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+			document.body.insertBefore(div, document.body.childNodes[0]);
+		});
+	});
+</script>
+
 </body>
 </html>

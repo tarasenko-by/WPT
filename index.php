@@ -5,6 +5,7 @@
  * @subpackage your-clean-template-3
  */
 get_header(); // подключаем header.php ?> 
+
 <section>
 	<div class="container">
 		<div class="row">
