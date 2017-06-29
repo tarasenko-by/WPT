@@ -196,7 +196,6 @@ h5,
 .h3,
 .h4,
 .h5 {
-  margin: 2em 0 .8em 0;
   letter-spacing: -0.01em;
   line-height: 1.35em;
   font-weight: bold;
@@ -277,20 +276,17 @@ strong {
   display: inline-block;
   margin-right: 20px;
 }
-.wide,
-#sec_code {
+.wide {
   width: 100%;
   border: none;
   border-bottom: 1px solid #959fbb;
   padding: 5px;
 }
-.wide::-webkit-input-placeholder,
-#sec_code::-webkit-input-placeholder {
+.wide::-webkit-input-placeholder {
   color: #959fbb;
   font-size: 12px;
 }
-.wide::-moz-placeholder,
-#sec_code::-moz-placeholder {
+.wide::-moz-placeholder {
   color: #959fbb;
   font-size: 12px;
 }
@@ -317,6 +313,9 @@ strong {
   padding: 40px 40px 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+}
+.block {
+  margin-bottom: 40px;
 }
 /*============================================ 
 	Кнопки
@@ -438,8 +437,54 @@ header .navbar ul li.active a {
   padding: 80px 120px 160px;
   color: #fff;
   font-weight: 500;
-  text-align: center;
-  font-size: 24px;
+}
+.slide img {
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.slide .col-sm-10 {
+  padding-left: 40px;
+}
+.slide p {
+  margin-bottom: 15px;
+}
+.slide h5 {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+.slide li {
+  font-weight: 600;
+  border-radius: 4px;
+}
+.slide li a {
+  display: block;
+  padding: 3px 6px;
+  color: #fff;
+}
+.slide li a:hover {
+  text-decoration: none;
+}
+.slide li.youtube {
+  background: #cc181e;
+  transition: all 0.2s ease-in-out;
+}
+.slide li.youtube:hover {
+  background: #ea363c;
+}
+.slide li.telegram {
+  background: #0088cc;
+  transition: all 0.2s ease-in-out;
+}
+.slide li.telegram:hover {
+  background: #1ea6ea;
+}
+.slide li.vk {
+  background: #507299;
+  transition: all 0.2s ease-in-out;
+}
+.slide li.vk:hover {
+  background: #6e90b7;
 }
 /*============================================ 
 	Краткая новость
@@ -518,188 +563,55 @@ header .navbar ul li.active a {
 .story .col-sm-7 .info .category a:hover {
   text-decoration: none;
 }
-/*============================================ 
-	Навигация
-============================================*/
-.navigation {
+.full-story .title {
+  font-size: 24px;
+}
+.full-story .info {
+  margin-top: 0px;
   margin-bottom: 20px;
 }
-.navigation span {
-  color: #ccc;
-  margin: 5px;
+.full-story .info .date {
+  color: #959fbb;
+  font-size: 12px;
 }
-.navigation a {
-  display: inline-block;
-  padding: 5px;
-  color: #6e96ff;
-}
-/*============================================ 
-	Авторизация
-============================================*/
-.btn-login {
-  width: 80px;
-  height: 40px;
-  border: none;
-  background: none;
-  padding: 0px;
+.full-story .meta-block {
+  border-top: 1px solid #eee;
   margin: 0px;
-  margin-top: 12px;
+  margin-top: 40px;
 }
-.btn-login img {
-  height: 40px;
-  border-radius: 4px;
-}
-.btn-login-text {
-  border: none;
-  background: none;
-  padding: 0px;
-  margin: 0px;
-  margin-top: 19px;
-  margin-right: 20px;
+.full-story .meta-block .meta {
   color: #434f74;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.login_form {
-  padding: 20px;
-}
-.loginpane label {
-  font-weight: 600;
-}
-.loginpane .login_form__foot {
-  margin-top: 20px;
-  text-align: center;
-  border-top: 1px dashed #eee;
-}
-.loginpane .login_form__foot a {
-  margin-top: 10px;
-  display: block;
-}
-.loginpane .icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  position: relative;
-  top: 3px;
-  fill: #434f74;
-}
-/*============================================ 
-	Ошибки
-============================================*/
-.info {
-  padding-bottom: 30px;
-}
-/*============================================ 
-	Обратная связь
-============================================*/
-.feedback {
-  margin-bottom: 30px;
-}
-.feedback label {
-  font-weight: 600;
-}
-.feedback .btn {
+  font-size: 12px;
   margin-top: 20px;
 }
-.feedback .wide::-webkit-input-placeholder {
-  color: #959fbb;
-  font-size: 12px;
+.full-story .meta-block .meta ul {
+  margin-bottom: 5px;
 }
-.feedback .wide::-moz-placeholder {
-  color: #959fbb;
-  font-size: 12px;
-}
-/*============================================ 
-	Модальное окно
-============================================*/
-.ui-dialog {
-  background: #fff;
-  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-.ui-dialog .ui-dialog-titlebar {
-  padding: 20px 20px;
-  cursor: move;
-  position: relative;
-  border-bottom: 1px solid #eaeaea;
-}
-.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
-  font-weight: 600;
-  font-size: 16px;
-}
-.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  margin-top: -16px;
-  height: 32px;
-  width: 32px;
-  border: 0 none !important;
-}
-.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon {
-  display: block;
-  margin: 10px auto 0 auto;
-  width: 14px;
-  height: 14px;
-  background-image: url(../images/cross.png);
-  -webkit-background-size: 14px auto;
-  background-size: 14px auto;
-  opacity: .5;
-  overflow: hidden;
-  text-indent: -9999px;
-}
-.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon:hover {
-  opacity: 1;
-}
-.ui-dialog #dlepopup {
-  padding: 20px;
-}
-.ui-dialog .ui-dialog-buttonpane {
-  padding: 20px;
+.full-story .meta-block .share {
+  margin-top: 15px;
   text-align: right;
-  border-top: 1px solid #eaeaea;
-}
-.ui-dialog .ui-helper-clearfix {
-  display: block;
-}
-.ui-dialog .ui-button {
-  border: none;
-  background: none;
-  padding: 7px 15px;
-  background: #6e96ff;
-  border-radius: 4px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.ui-dialog .ui-button:hover {
-  background: #5078e1;
 }
 /*============================================ 
-	Пользователь
+	Футер
 ============================================*/
-.user .user_tab li {
-  width: 50%;
-  float: left;
+.footer {
+  background: #30333b;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #eeeeee;
+  font-size: 13px;
 }
-.user .user_tab li a {
-  padding-bottom: 10px;
-  display: block;
+.footer .arrow-up .icon {
+  width: 40px;
+  height: 40px;
+  fill: #eeeeee;
+  border: 1px solid #4d515e;
   text-align: center;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
+  padding: 10px 0px 10px 7px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
 }
-.user .user_tab li.active a,
-.user .user_tab li.active a:focus,
-.user .user_tab li.active a:hover {
-  font-weight: 600;
-  color: #6e96ff;
-  border-bottom: 1px solid #6e96ff;
-}
-.user label {
-  font-weight: 600;
-  color: #959fbb;
-}
-.searchpage {
-  margin-bottom: 40px;
+.footer .arrow-up .icon:hover,
+.footer .arrow-up .icon:focus {
+  border: 1px solid #eeeeee;
 }

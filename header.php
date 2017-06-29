@@ -37,9 +37,9 @@
 						<strong>
 							<?php bloginfo('name'); ?>
 						</strong> 
-						<!-- <span>
+						<span>
 							<?php bloginfo('description'); ?>
-						</span> -->
+						</span>
 					</a>
 				</div>
 				<div class="col-sm-8 text-right">

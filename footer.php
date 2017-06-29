@@ -5,29 +5,33 @@
  * @subpackage your-clean-template-3
  */
 ?>
-	<footer>
+<footer class="container-fluid footer">
+	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<?php $args = array( // опции для вывода нижнего меню, чтобы они работали, меню должно быть создано в админке
-						'theme_location' => 'bottom', // идентификатор меню, определен в register_nav_menus() в function.php
-						'container'=> false, // обертка списка, false - это ничего
-						'menu_class' => 'nav nav-pills bottom-menu', // класс для ul
-				  		'menu_id' => 'bottom-nav', // id для ul
-				  		'fallback_cb' => false
-				  	);
-					wp_nav_menu($args); // выводим нижние меню
-					?>
+				<div class="col-sm-6">
+					<p>Copyright © 2015–2017 Creade.ru All Rights Reserved.</p>
+					<p>Powered by DataLife Engine © 2017</p>
+				</div>
+				<div class="col-sm-6 pmn text-right arrow-up">
+					<a href="/" id="upper">
+						<svg class="icon icon-arrow-up">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-up"></use>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</div>
-	</footer>
+	</div>
+</footer>
+
+
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 
 
 <script type="text/javascript">
 	jQuery(function($){
-		$.get('/wp-content/themes/WPT/images/icons.svg', function(data) {
+		$.get('/wp-content/themes/creade/images/icons.svg', function(data) {
 			var div = document.createElement("div");
 			div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
 			document.body.insertBefore(div, document.body.childNodes[0]);

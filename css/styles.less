@@ -21,6 +21,7 @@
 @deep-blue: #6e96ff;
 @middle-text: #959fbb;
 @red: #d34575;
+@light-text: #eee;
 
 /*============================================ 
 	Сброс
@@ -52,7 +53,6 @@ body, select, input, textarea, button {
 
 /* Заголовки H1-6 */
 h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
-	margin: 2em 0 .8em 0;
 	letter-spacing: -0.01em;
 	line-height: 1.35em;
 	font-weight: bold;
@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 	.ul-lsn{ list-style: none;}
 	.ul-line{ li {display: inline-block; margin-right: 20px;}}
 
-	.wide, #sec_code{ 
+	.wide{ 
 		width: 100%;
 		border: none;
 		border-bottom: 1px solid @middle-text;
@@ -133,6 +133,9 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 	}
 }
 
+.block{
+	margin-bottom: 40px;
+}
 
 
 
@@ -291,10 +294,67 @@ header{
 	padding: 80px 120px 160px;
 	color: #fff;
 	font-weight: 500;
-	text-align: center;
-	font-size: 24px;
-}
 
+	img{
+		box-shadow: 0px 0px 60px rgba(0,0,0,0.3);
+		.br;
+	}
+
+	.col-sm-10{
+		padding-left: 40px;
+	}
+
+	p{
+		margin-bottom: 15px;
+	}
+
+	h5{
+		.pmn;
+		margin-bottom: 15px;
+	}
+
+	li{
+		font-weight: 600;
+		.br;
+
+		a{
+			display: block;
+			padding: 3px 6px;
+			color: #fff;
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+
+	li.youtube{
+		background: #cc181e;
+		.animate;
+
+		&:hover{
+			background: #cc181e + 30%;
+		}
+	}
+
+	li.telegram{
+		background: #0088cc;
+		.animate;
+
+		&:hover{
+			background: #0088cc + 30%;
+		}
+	}
+
+	li.vk{
+		background: #507299;
+		.animate;
+
+		&:hover{
+			background: #507299 + 30%;
+		}
+	}
+}
 
 
 
@@ -396,252 +456,70 @@ header{
 	}
 }
 
+.full-story{
 
-
-
-/*============================================ 
-	Навигация
-============================================*/
-.navigation{
-	margin-bottom: 20px;
-
-	span{
-		color: #ccc;
-		margin: 5px;
+	.title{
+		font-size: 24px;
 	}
 
-	a{
-		display: inline-block;
-		padding: 5px;
-		color: @deep-blue;
-	}
-}
+	.info{
+		margin-top: 0px;
+		margin-bottom: 20px;
 
-
-
-
-/*============================================ 
-	Авторизация
-============================================*/
-.btn-login{
-	width: 80px;
-	height: 40px;
-	border:none;
-	background: none;
-	.pmn;
-	margin-top: 12px;
-
-	img{
-		height: 40px;
-		.br;
-	}
-}
-
-.btn-login-text{
-	border:none;
-	background: none;
-	.pmn;
-	margin-top: 19px;
-	margin-right: 20px;
-	color: @blue;
-	overflow: hidden;
-	.br;
-}
-
-.login_form{
-	padding: 20px;
-}
-
-.loginpane{
-	label{
-		font-weight: 600;
-	}
-
-	.login_form__foot{
-		margin-top: 20px;
-		text-align: center;
-		border-top: 1px dashed #eee;
-
-		a{
-			margin-top: 10px;
-			display: block;
-		}
-	}
-
-	.icon{
-		width: 20px;
-		height: 20px;
-		margin-right: 5px;
-		position: relative;
-		top: 3px;
-		fill: @blue;
-	}
-}
-
-
-
-
-/*============================================ 
-	Ошибки
-============================================*/
-.info{
-	padding-bottom: 30px;
-}
-
-
-
-
-/*============================================ 
-	Обратная связь
-============================================*/
-.feedback{
-	margin-bottom: 30px;
-
-	label{
-		font-weight: 600;
-	}
-
-	.btn{
-		margin-top: 20px;
-	}
-
-	.wide{
-
-		&::-webkit-input-placeholder{
-			color: @middle-text;
-			font-size: 12px;
-		}
-
-		&::-moz-placeholder{
+		.date{
 			color: @middle-text;
 			font-size: 12px;
 		}
 	}
+
+	.meta-block{
+		border-top: 1px solid #eee;
+		margin: 0px;
+		margin-top: 40px;
+
+		.meta{
+			color: @blue;
+			font-size: 12px;
+			margin-top: 20px;
+
+			ul{
+				margin-bottom: 5px;
+			}
+		}
+
+		.share{
+			margin-top: 15px;
+			text-align: right;
+		}
+	}
 }
-
-
 
 
 /*============================================ 
-	Модальное окно
+	Футер
 ============================================*/
-.ui-dialog{
-	background: #fff;
-	box-shadow: 0px 0px 80px rgba(0,0,0,0.3);
-	.br;
+.footer{
+	background: #30333b;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: @light-text;
+	font-size: 13px;
 
-	.ui-dialog-titlebar {
-		padding: 20px 20px;
-		cursor: move;
-		position: relative;
-		border-bottom: 1px solid #eaeaea;
+	.arrow-up{
 
-		.ui-dialog-title {
-			font-weight: 600;
-			font-size: 16px;
-		}
+		.icon{
+			width: 40px;
+			height: 40px;
+			fill: @light-text;
+			border: 1px solid #4d515e;
+			text-align: center;
+			padding: 10px 0px 10px 7px;
+			.br;
+			.animate;
 
-		.ui-dialog-titlebar-close {
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			margin-top: -16px;
-			height: 32px;
-			width: 32px;
-			border: 0 none !important;
-
-			.ui-icon {
-				display: block;
-				margin: 10px auto 0 auto;
-				width: 14px;
-				height: 14px;
-				background-image: url(../images/cross.png);
-				-webkit-background-size: 14px auto;
-				background-size: 14px auto;
-				opacity: .5;
-				overflow: hidden; 
-				text-indent: -9999px;
-
-				&:hover{
-					opacity: 1;
-				}
+			&:hover, &:focus{
+				border: 1px solid @light-text;
 			}
 		}
 	}
-
-	#dlepopup{
-		padding: 20px;
-	}
-
-	.ui-dialog-buttonpane {
-		padding: 20px;
-		text-align: right;
-		border-top: 1px solid #eaeaea;
-	}
-
-	.ui-helper-clearfix {
-		display: block;
-	}
-
-	.ui-button{
-		border: none;
-		background: none;
-		padding: 7px 15px;
-		background: @deep-blue;
-		.br;
-		color: #fff;
-		font-weight: bold;
-		text-transform: uppercase;
-
-		&:hover{
-			background: @deep-blue - 30%;
-		}
-	}
-}
-
-
-
-
-/*============================================ 
-	Пользователь
-============================================*/
-.user{
-
-	.user_tab{
-
-		li{
-			width: 50%;
-			float: left;
-			
-			a{
-				padding-bottom: 10px;
-				display: block;
-				text-align: center;
-				text-decoration: none;
-				border-bottom: 1px solid #eee;
-
-				&:hover{
-
-				}
-			}
-
-			&.active{
-				a, a:focus, a:hover{
-					font-weight: 600;
-					color: @deep-blue;
-					border-bottom: 1px solid @deep-blue;
-				}
-			}
-
-		}
-	}
-
-	label{
-		font-weight: 600;
-		color: @middle-text;
-	}
-}
-
-.searchpage{
-	margin-bottom: 40px;
 }
