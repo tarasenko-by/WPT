@@ -36,7 +36,7 @@ get_header(); // подключаем header.php ?>
 				<div class="content-block">
 					<div class="content-wrapper">
 
-						<?php  //
+						<h1><?php  //
 							if (is_day()) : printf('Daily Archives: %s', get_the_date());
 							elseif (is_month()) : printf('Архив за: %s', get_the_date('F Y'));
 							elseif (is_year()) : printf('Yearly Archives: %s', get_the_date('Y'));

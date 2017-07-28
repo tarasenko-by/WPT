@@ -10,5 +10,5 @@
 		<label class="sr-only" for="search-field">Поиск</label>
 		<input type="search" class="form-control input-sm" id="search-field" placeholder="Строка для поиска" value="<?php echo get_search_query() ?>" name="s">
 	</div>
-	<button type="submit" class="btn btn-default btn-sm">Искать</button>
+	<button type="submit" class="btn btn-default btn-sm btn-search"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg> </button>
 </form>

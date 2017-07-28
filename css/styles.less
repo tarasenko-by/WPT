@@ -129,6 +129,12 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 			padding: 40px 40px 10px;
 			box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
 			.br;
+
+			h3{
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 20px;
+			}
 		}
 	}
 }
@@ -457,6 +463,11 @@ header{
 }
 
 .full-story{
+	padding-bottom: 20px !important;
+
+	img{
+		margin: 20px 0px;
+	}
 
 	.title{
 		font-size: 24px;
@@ -494,6 +505,89 @@ header{
 	}
 }
 
+.page{
+	h1.title{
+		margin-bottom: 20px;
+	}
+}
+
+
+
+
+/*============================================ 
+	Комментарии
+============================================*/
+#comments{
+	h2{
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.comment-list.media-list{
+
+		li{
+
+			.media-left{
+				img{
+					.br;
+				}
+			}
+
+			.media-body{
+			border-bottom: 1px solid #eee;
+			padding-bottom: 20px;
+			margin-bottom: 10px;
+			padding-left: 10px;
+
+				span.media-heading{
+					small{
+						display: block;
+						font-size: 12px;
+						color: @middle-text;
+					}
+				}
+
+				p{
+					margin: 20px 0px;
+				}
+
+				.comment-reply-link{
+				}
+			}
+
+			.children{
+				padding-top: 20px;
+			}
+		}
+	}
+}
+
+#respond{
+	margin-top: 40px;
+	margin-bottom: 20px;
+
+	h3{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	.comment-notes{
+		margin-bottom: 10px;
+		color: @red;
+	}
+
+	.form-group{
+
+		label{
+			font-weight: 600;
+		}
+	}
+
+	.help-block.form-allowed-tags, abbr, code{
+		color: @middle-text;
+	}
+}
+
 
 /*============================================ 
 	Футер
@@ -521,5 +615,15 @@ header{
 				border: 1px solid @light-text;
 			}
 		}
+	}
+}
+
+
+.btn-search{
+	padding: 4px 10px;
+	svg{
+		width: 16px;
+		height: 16px;
+		fill: @blue;
 	}
 }

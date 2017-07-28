@@ -41,8 +41,9 @@ if (!class_exists('clean_comments_constructor')) { // если класс уже
 	    	echo '<div class="media-body">';
 	    	echo '<span class="meta media-heading">Автор: '.get_comment_author()."\n"; // имя автора коммента
 	    	//echo ' '.get_comment_author_email(); // email автора коммента, плохой тон выводить почту
-	    	echo ' '.get_comment_author_url(); // url автора коммента
-	    	echo ' Добавлено '.get_comment_date('F j, Y в H:i')."\n"; // дата и время комментирования
+	    	echo '<small>';
+	    	echo 'Добавлено: '.get_comment_date('F j, Y в H:i')."\n"; // дата и время комментирования
+	    	echo '</small>';
 	    	if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n"; // если комментарий должен пройти проверку
 	    	echo "</span>";
 	        comment_text()."\n"; // текст коммента

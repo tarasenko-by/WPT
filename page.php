@@ -20,7 +20,7 @@ get_header(); // подключаем header.php ?>
 				<div class="content-block">
 					<div class="content-wrapper">
 						<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('block'); ?>> <?php // контэйнер с классами и id ?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class('block page'); ?>> <?php // контэйнер с классами и id ?>
 								<h1 class="pmn title"><?php the_title(); // заголовок поста ?></h1>
 								<?php the_content(); // контент ?>
 							</article>

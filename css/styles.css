@@ -314,6 +314,11 @@ strong {
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
+.content .content-block .content-wrapper h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 .block {
   margin-bottom: 40px;
 }
@@ -563,6 +568,12 @@ header .navbar ul li.active a {
 .story .col-sm-7 .info .category a:hover {
   text-decoration: none;
 }
+.full-story {
+  padding-bottom: 20px !important;
+}
+.full-story img {
+  margin: 20px 0px;
+}
 .full-story .title {
   font-size: 24px;
 }
@@ -591,6 +602,56 @@ header .navbar ul li.active a {
   margin-top: 15px;
   text-align: right;
 }
+.page h1.title {
+  margin-bottom: 20px;
+}
+/*============================================ 
+	Комментарии
+============================================*/
+#comments h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#comments .comment-list.media-list li .media-left img {
+  border-radius: 4px;
+}
+#comments .comment-list.media-list li .media-body {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+#comments .comment-list.media-list li .media-body span.media-heading small {
+  display: block;
+  font-size: 12px;
+  color: #959fbb;
+}
+#comments .comment-list.media-list li .media-body p {
+  margin: 20px 0px;
+}
+#comments .comment-list.media-list li .children {
+  padding-top: 20px;
+}
+#respond {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#respond h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#respond .comment-notes {
+  margin-bottom: 10px;
+  color: #d34575;
+}
+#respond .form-group label {
+  font-weight: 600;
+}
+#respond .help-block.form-allowed-tags,
+#respond abbr,
+#respond code {
+  color: #959fbb;
+}
 /*============================================ 
 	Футер
 ============================================*/
@@ -614,4 +675,12 @@ header .navbar ul li.active a {
 .footer .arrow-up .icon:hover,
 .footer .arrow-up .icon:focus {
   border: 1px solid #eeeeee;
+}
+.btn-search {
+  padding: 4px 10px;
+}
+.btn-search svg {
+  width: 16px;
+  height: 16px;
+  fill: #434f74;
 }

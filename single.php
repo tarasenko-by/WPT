@@ -31,14 +31,14 @@ get_header(); // подключаем header.php ?>
 					</div>
 							<?php the_content(); // контент ?>
 							<div class="meta-block row">
-								<div class="meta col-sm-6">
+								<div class="meta col-sm-6 pmn">
 									<ul class="ul-ui ul-line">
 										<li><p>Автор:  <?php the_author_posts_link(); ?></p></li>
 										<li><p>Категории: <?php the_category(',') ?></p> <?php // ссылки на категории в которых опубликован пост, через зпт ?></li>
 									</ul>
 									<?php the_tags('<p>Тэги: ', ',', '</p>'); // ссылки на тэги поста ?>
 								</div>
-								<div class="share col-sm-6">
+								<div class="share col-sm-6 pmn">
 									<!-- Ya.Share -->
 									<div class="share">
 										<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
