@@ -26,7 +26,7 @@
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
 <body <?php body_class(); // все классы для body ?>>
-
+<div id="top"></div>
 
 <header class="container-fluid">
 	<div class="row">

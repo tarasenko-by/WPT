@@ -15,6 +15,9 @@ get_header(); // подключаем header.php ?>
 			<div class="<?php content_class_by_sidebar(); // функция подставит класс в зависимости от того есть ли сайдбар, лежит в functions.php ?> content">
 
 				<div class="slide">
+					<ul class="breadcrumb">
+						<?php the_breadcrumb() ?>
+					</ul>
 				</div>
 
 				<div class="content-block">

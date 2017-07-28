@@ -160,4 +160,42 @@ if (!function_exists('content_class_by_sidebar')) { // если ф-я уже е�
 	}
 }
 
+
+
+
+# Breadcrumb
+function the_breadcrumb() {
+	if (!is_home()) {
+		echo '<li><a href="';
+		echo get_option('home').'">';
+		echo 'Главная';
+		echo "</a> <span class='divider'>/</span></li> ";
+		if (is_category() || is_single()) {
+			echo "<li>";
+			single_cat_title();
+			echo "</li>";
+			if (is_single()) {
+			the_category(', ');
+				echo " <li><span class='divider'>/</span> ";
+				the_title();
+				echo "</li>";
+			}
+		} elseif (is_page()) {
+			echo "<li>";
+			echo the_title();
+			echo "</li>";
+		}
+		  elseif (is_tag()) {
+			echo 'Записи с меткой "'; 
+			single_tag_title();
+			echo '"'; }
+		elseif (is_day()) {echo "Архив за"; the_time('  jS F Y');}
+		elseif (is_month()) {echo "Архив "; the_time(' F  Y');}
+		elseif (is_year()) {echo "Архив за "; the_time(' Y');}
+		elseif (is_author()) {echo "Архив автора";}
+		elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "Архив блога";}
+		elseif (is_search()) {echo "Результаты поиска";}
+			elseif (is_404()) {	echo '404 - Страница не найдена';}
+	}
+}
 ?>

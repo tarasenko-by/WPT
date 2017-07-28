@@ -37,10 +37,31 @@ get_header(); // подключаем header.php ?>
 				<div class="content-block">
 					<div class="content-wrapper">
 
-						<h3><?php printf('Поиск по строке: %s', get_search_query()); // заголовок поиска ?></h3>
+						<h3><?php printf('Поиск по строке: %s', get_search_query()); ?></h3>
 						
-						<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
-							<?php get_template_part('loop'); // для отображения каждой записи берем шаблон loop.php ?>
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							
+							<article id="post-<?php the_ID(); ?>" <?php post_class('search-story row pmn'); ?>>
+								<div class="col-sm-12 pmn">
+
+									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+									<?php the_content(''); // пост превью, до more ?>
+
+									<div class="info">
+											<div class="date">
+												<p><?php the_time(get_option('date_format')." в ".get_option('time_format')); ?></p> <?php // дата и время создания ?>
+											</div>
+
+										<div class="category text-right">
+											<?php the_category(',') ?><?php // ссылки на категории в которых опубликован пост, через зпт ?>
+										</div>
+
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</article>
+
 						<?php endwhile; // конец цикла
 
 						else: echo '<p>Нет записей.</p>'; endif; // если записей нет, напишим "простите" ?>	 

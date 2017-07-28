@@ -265,6 +265,9 @@ strong {
 .br {
   border-radius: 4px;
 }
+.img-center {
+  margin: auto;
+}
 .ul-ui {
   padding: 0px;
   margin: 0px;
@@ -399,21 +402,22 @@ header .navbar ul li.active a {
 .sidebar {
   padding: 40px;
 }
-.sidebar .widgettitle {
-  margin-bottom: 30px;
-  font-weight: 600;
+.sidebar .widget {
   margin-bottom: 40px;
+}
+.sidebar .widget .widgettitle {
+  font-weight: 600;
+  margin-bottom: 30px;
   display: block;
 }
-.sidebar ul {
+.sidebar .widget ul {
   font-weight: 500;
-  margin-bottom: 40px;
 }
-.sidebar ul li {
+.sidebar .widget ul li {
   margin-bottom: 15px;
   color: #959fbb;
 }
-.sidebar ul li a .icon {
+.sidebar .widget ul li a .icon {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -421,15 +425,15 @@ header .navbar ul li.active a {
   vertical-align: top;
   margin-right: 10px;
 }
-.sidebar ul li a:hover,
-.sidebar ul li a:focus {
+.sidebar .widget ul li a:hover,
+.sidebar .widget ul li a:focus {
   text-decoration: none;
 }
-.sidebar ul li a:hover .icon,
-.sidebar ul li a:focus .icon {
+.sidebar .widget ul li a:hover .icon,
+.sidebar .widget ul li a:focus .icon {
   fill: #434f74;
 }
-.sidebar ul li a span {
+.sidebar .widget ul li a span {
   color: #d34575;
   font-weight: bold;
 }
@@ -491,6 +495,37 @@ header .navbar ul li.active a {
 .slide li.vk:hover {
   background: #6e90b7;
 }
+.slide .breadcrumb {
+  position: relative;
+  top: 60px;
+  left: -45px;
+  background: none;
+  padding: 0px;
+  margin: 0px;
+}
+.slide .breadcrumb li {
+  display: inline-block;
+}
+.slide .breadcrumb li .divider {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  font-weight: 100;
+  opacity: 0.6;
+  cursor: default;
+}
+.slide .breadcrumb a {
+  display: inline-block;
+  padding: 3px 6px;
+  color: #fff;
+  font-weight: normal;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+.slide .breadcrumb a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
 /*============================================ 
 	Краткая новость
 ============================================*/
@@ -498,6 +533,10 @@ header .navbar ul li.active a {
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #eee;
+}
+.story:last-child {
+  padding-bottom: 0px;
+  border: none;
 }
 .story img {
   border-radius: 4px;
@@ -602,14 +641,70 @@ header .navbar ul li.active a {
   margin-top: 15px;
   text-align: right;
 }
+.search-story {
+  border-top: 1px solid #eee;
+  padding: 20px 0px;
+}
+.search-story h2 {
+  font-size: 20px;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.search-story h2 a {
+  color: #6e96ff;
+}
+.search-story .info {
+  margin-top: 20px;
+}
+.search-story .info .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  fill: #959fbb;
+}
+.search-story .info .date {
+  float: left;
+  width: 50%;
+  color: #959fbb;
+}
+.search-story .info .date .icon {
+  position: relative;
+  top: 2px;
+}
+.search-story .info .category {
+  float: left;
+  width: 50%;
+  font-size: 14px;
+}
+.search-story .info .category .icon {
+  position: relative;
+  top: 3px;
+}
+.search-story .info .category a {
+  color: #959fbb;
+  font-weight: normal;
+  font-size: 14px;
+  display: inline-block;
+}
+.search-story .info .category a:hover {
+  text-decoration: none;
+}
 .page h1.title {
   margin-bottom: 20px;
+}
+.error-page h2 {
+  font-size: 42px;
 }
 /*============================================ 
 	Комментарии
 ============================================*/
 #comments h2 {
   font-size: 20px;
+  margin-bottom: 20px;
+}
+#comments .comment-list.media-list li {
   margin-bottom: 20px;
 }
 #comments .comment-list.media-list li .media-left img {
