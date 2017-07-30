@@ -532,9 +532,7 @@ header .navbar ul li.active a {
   border-radius: 4px;
   position: relative;
   z-index: 2;
-  display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 .story .col-sm-5:after {
   content: " ";
@@ -604,6 +602,10 @@ header .navbar ul li.active a {
 }
 .full-story img {
   margin: 20px 0px;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 .full-story .title {
   font-size: 24px;
