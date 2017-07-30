@@ -153,9 +153,9 @@ if (!class_exists('bootstrap_menu')) {
 if (!function_exists('content_class_by_sidebar')) { // если ф-я уже есть в дочерней теме - нам не надо её определять
 	function content_class_by_sidebar() { // функция для вывода класса в зависимости от существования виджетов в сайдбаре
 		if (is_active_sidebar( 'sidebar' )) { // если есть
-			echo 'col-sm-9'; // пишем класс на 80% ширины
+			echo 'col-md-9'; // пишем класс на 80% ширины
 		} else { // если нет
-			echo 'col-sm-12'; // контент на всю ширину
+			echo 'col-md-12'; // контент на всю ширину
 		}
 	}
 }

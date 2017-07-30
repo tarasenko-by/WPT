@@ -31,7 +31,7 @@
 
 <script type="text/javascript">
 	jQuery(function($){
-		$.get('/wp-content/themes/WPT/images/icons.svg', function(data) {
+		$.get('/wp-content/themes/creade/images/icons.svg', function(data) {
 			var div = document.createElement("div");
 			div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
 			document.body.insertBefore(div, document.body.childNodes[0]);

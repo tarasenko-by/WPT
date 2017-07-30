@@ -83,25 +83,12 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 	.ul-lsn{ list-style: none;}
 	.ul-line{ li {display: inline-block; margin-right: 20px;}}
 
-	.wide{ 
-		width: 100%;
-		border: none;
-		border-bottom: 1px solid @middle-text;
-		padding: 5px;
-
-		&::-webkit-input-placeholder{
-			color: @middle-text;
-			font-size: 12px;
-		}
-
-		&::-moz-placeholder{
-			color: @middle-text;
-			font-size: 12px;
-		}
-	}
-
-	#sec_code{
-		width: 200px;
+	blockquote{
+		background: #f1f1f1;
+		padding: 20px;
+		margin: 10px 0px;
+		border-left: 2px solid @deep-blue;
+		border-radius: 0px 4px 4px 0px;
 	}
 
 
@@ -419,7 +406,9 @@ header{
 		.br;
 		position: relative;
 		z-index: 2;
-		width: 100%;
+		display: block;
+		max-width: 100%;
+		height: auto;
 	}
 
 	.col-sm-5{
@@ -734,5 +723,136 @@ header{
 		width: 16px;
 		height: 16px;
 		fill: @blue;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*============================================ 
+==============================================
+==============================================
+
+					Футер
+
+==============================================
+==============================================
+============================================*/
+@media screen and (max-width: 991px) {
+	header{
+		.logotype{
+			text-align: center;
+		}
+
+		nav{
+			ul{
+				width: 100%;
+			}
+		}
+
+		.navbar-header{
+			button{
+				border: 1px solid @deep-blue;
+				color: @deep-blue;
+				font-weight: 600;
+				padding: 6px 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navbar-header{
+		text-align: center;
+	}
+
+	.navbar-nav{
+		text-align: center !important;
+		margin: 0px;
+	}
+
+	.navbar-header{
+		padding-bottom: 20px;
+		border-bottom: 1px solid #eee;
+	}
+
+	.content-block{
+		padding: 0px 20px !important;
+	}
+
+	ul.breadcrumb{
+		display: none;
+	}
+
+	.media-left{
+		display: none;
+	}
+
+	header{
+		.row{
+			padding: 0px;
+
+			.container{
+				padding: 0px;
+			}
+		}
+	}
+
+	.content{
+		.content-block{
+			margin-top: -20px;
+
+			.content-wrapper{
+				padding: 20px;
+			}
+		}
+	}
+
+	.slide{
+		padding: 40px;
+		text-align: center;
+
+		.col-sm-2{
+
+			img{
+				width: 100px;
+				margin: auto !important;
+			}
+		}
+
+		.col-sm-10{
+			padding: 0px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	article{
+		margin-bottom: 0px !important;
+
+		.col-sm-5{
+			margin-bottom: 20px;
+
+			&:after{
+				display: none !important;
+			}
+		}
+
+		.col-sm-7{
+			.pmn;
+			padding-left: 0px !important;
+		}
+	}
+
+	.arrow-up{
+		margin: 20px 0px;
+		text-align: center;
 	}
 }

@@ -32,7 +32,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 logotype">
+				<div class="col-md-4 col-sm-12 logotype">
 					<a href="/">
 						<strong>
 							<?php bloginfo('name'); ?>
@@ -42,14 +42,12 @@
 						</span>
 					</a>
 				</div>
-				<div class="col-sm-8 text-right">
+				<div class="col-md-8 col-sm-12 text-right">
 					<nav class="navbar">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnav" aria-expanded="false">
 								<span class="sr-only">Меню</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
+								Меню
 							</button>
 						</div>
 						<div class="collapse navbar-collapse " id="topnav">

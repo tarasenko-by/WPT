@@ -6,7 +6,7 @@
  */
 ?>
 <?php if (is_active_sidebar( 'sidebar' )) { // если в сайдбаре есть что выводить ?>
-	<aside class="col-sm-3 sidebar">
+	<aside class="col-md-3 hidden-xs hidden-sm sidebar">
 		<?php dynamic_sidebar('sidebar'); // выводим сайдбар, имя определено в functions.php ?>
 	</aside>
 <?php } ?>
