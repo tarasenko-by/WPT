@@ -600,6 +600,13 @@ header .navbar ul li.active a {
 .full-story {
   padding-bottom: 20px !important;
 }
+.full-story a {
+  color: #6e96ff;
+}
+.full-story strong,
+.full-story b {
+  font-weight: 600;
+}
 .full-story img {
   margin: 20px 0px;
   display: block;
