@@ -603,6 +603,9 @@ header .navbar ul li.active a {
 .full-story a {
   color: #6e96ff;
 }
+.full-story a.btn {
+  color: #fff;
+}
 .full-story strong,
 .full-story b {
   font-weight: 600;
