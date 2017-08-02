@@ -13,7 +13,7 @@ register_nav_menus(array( // Регистрируем 2 меню
 ));
 
 add_theme_support('post-thumbnails'); // включаем поддержку миниатюр
-set_post_thumbnail_size(250, 150); // задаем размер миниатюрам 250x150
+set_post_thumbnail_size(300, 250); // задаем размер миниатюрам 250x150
 add_image_size('big-thumb', 400, 400, true); // добавляем еще один размер картинкам 400x400 с обрезкой
 
 register_sidebar(array( // регистрируем левую колонку, этот кусок можно повторять для добавления новых областей для виджитов
