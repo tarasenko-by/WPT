@@ -606,6 +606,13 @@ header .navbar ul li.active a {
 .full-story a.btn {
   color: #fff;
 }
+.full-story ul {
+  list-style-type: disc;
+  margin-bottom: 5px;
+}
+.full-story p {
+  margin-bottom: 10px;
+}
 .full-story strong,
 .full-story b {
   font-weight: 600;

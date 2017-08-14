@@ -16,11 +16,15 @@ get_header(); // подключаем header.php ?>
 
 				<div class="slide">
 					<div class="col-sm-2 pmn">
-						<img src="<?php echo get_theme_root_uri(); ?>/creade/images/photo.jpg" alt="" class="img-responsive">
+						<img src="<?php echo get_theme_mod('authorPhoto', ''); ?>" alt="" class="img-responsive">
 					</div>
 					<div class="col-sm-10">
-						<h5>Немного обо мне</h5>
-						<p>Меня зовут Сергей Тарасенко и я занимаюсь UX/UI и web-дизайном. В свободное время делиюсь свои опытом в блоге и на YouTube канале.</p>
+
+
+						<h5><?php echo get_theme_mod('aboutTitle', ''); ?></h5>
+						<p>
+							<?php echo get_theme_mod('about', ''); ?>
+						</p>
 						<p>
 							Подпишись на обновления:
 						</p>
