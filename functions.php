@@ -202,7 +202,7 @@ function the_breadcrumb() {
 
 add_action('customize_register', function($customizer) {
 		$customizer->add_section(
-			'example_section_one', array(
+			'about_author', array(
 				'title' => 'О авторе',
 				'description' => 'Информация о авторе',
 				'priority' => 11,
@@ -215,7 +215,7 @@ add_action('customize_register', function($customizer) {
 		$customizer->add_control(
 			'aboutTitle', array(
 				'label' => 'About Title',
-				'section' => 'example_section_one',
+				'section' => 'about_author',
 				'type' => 'text',
 			)
 		);
@@ -226,7 +226,7 @@ add_action('customize_register', function($customizer) {
 		$customizer->add_control(
 			'about', array(
 				'label' => 'About Text',
-				'section' => 'example_section_one',
+				'section' => 'about_author',
 				'type' => 'text',
 			)
 		);
@@ -237,11 +237,10 @@ add_action('customize_register', function($customizer) {
 			new WP_Customize_Upload_Control(
 				$customizer, 'authorPhoto', array(
 					'label' => 'Author Photo',
-					'section' => 'example_section_one',
+					'section' => 'about_author',
 					'settings' => 'authorPhoto'
 				)
 			)
 		);
 	});
-
 ?>
