@@ -548,7 +548,6 @@ header .navbar ul li.active a {
 }
 .story .col-sm-7 {
   padding-left: 20px;
-  font-size: 15px;
 }
 .story .col-sm-7 h2 {
   padding: 0px;
@@ -557,7 +556,7 @@ header .navbar ul li.active a {
 .story .col-sm-7 h2 a {
   color: #6e96ff;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 16px;
   display: block;
   margin-bottom: 10px;
   line-height: 1.3;
