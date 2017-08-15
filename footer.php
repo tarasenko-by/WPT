@@ -29,33 +29,34 @@
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 
 
-<script type="text/javascript">
-	jQuery(function($){
-		$.get('/wp-content/themes/creade/images/icons.svg', function(data) {
-			var div = document.createElement("div");
-			div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
-			document.body.insertBefore(div, document.body.childNodes[0]);
-		});
+<script>
+
+// Подключаем SVG-иконки
+jQuery(function($){
+	$.get('<?php echo  get_template_directory(); ?>/images/icons.svg', function(data) {
+		var div = document.createElement("div");
+		div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+		document.body.insertBefore(div, document.body.childNodes[0]);
 	});
+});
 </script>
 
-<!-- Планость ссылок -->
-	<script>
-		$(function(){
-			$(document).ready(function() {
-				$("#upper").click(function() {
-					$("html, body").animate({
-						scrollTop: $($(this).attr("href")).offset().top-61
-					}, {
-						duration: 500,
+<script>
+// Планость ссылок
+$(function(){
+	$(document).ready(function() {
+		$("#upper").click(function() {
+			$("html, body").animate({
+				scrollTop: $($(this).attr("href")).offset().top-61
+			}, {
+				duration: 500,
 
-					});
-					return false;
-				});
 			});
+			return false;
 		});
-	</script>
-
+	});
+});
+</script>
 
 </body>
 </html>
