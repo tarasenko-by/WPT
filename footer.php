@@ -33,15 +33,13 @@
 
 // Подключаем SVG-иконки
 jQuery(function($){
-	$.get('<?php echo  get_template_directory(); ?>/images/icons.svg', function(data) {
+	$.get('<?php echo get_template_directory_uri(); ?>/images/icons.svg', function(data) {
 		var div = document.createElement("div");
 		div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
 		document.body.insertBefore(div, document.body.childNodes[0]);
 	});
 });
-</script>
 
-<script>
 // Планость ссылок
 $(function(){
 	$(document).ready(function() {
