@@ -409,6 +409,66 @@ header{
 		width: 100%;
 	}
 
+	.col-sm-12{
+
+		h2{
+			margin: 20px 0px;
+
+			a{
+				color: @deep-blue;
+				font-weight: 600;
+				font-size: 20px;
+				display: block;
+				margin-bottom: 10px;
+				line-height: 1.3;
+			}
+		}
+
+		.info{
+			margin-top:20px;
+
+			.icon{
+				width: 14px;
+				height: 14px;
+				margin-right: 5px;
+				fill: @middle-text;
+			}
+
+			.date{
+				float: left;
+				width: 50%;
+				color: @middle-text;
+
+				.icon{
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			.category{
+				float: left;
+				width: 50%;
+				font-size: 14px;
+
+				.icon{
+					position: relative;
+					top: 3px;
+				}
+
+				a{
+					color: @middle-text;
+					font-weight: normal;
+					font-size: 14px;
+					display: inline-block;
+
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
 	.col-sm-5{
 
 		&:after{
@@ -446,7 +506,7 @@ header{
 
 
 		.info{
-			margin-top:2 0px;
+			margin-top:20px;
 
 			.icon{
 				width: 14px;
@@ -564,6 +624,40 @@ header{
 			text-align: right;
 		}
 	}
+
+}
+
+.other-posts{
+		margin-bottom: 30px;
+	a{
+		background: @deep-blue;
+		padding: 10px;
+		color: #fff;
+		.animate;
+		.br;
+
+		.icon{
+			width: 15px;
+			height: 15px;
+			position: relative;
+			top: 5px;
+			fill: #fff;
+		}
+
+		.icon-arrow-left{
+			margin-right: 8px;
+		}
+
+		.icon-arrow-right{
+			margin-left: 8px;
+		}
+
+		&:hover, &:focus{
+			background: @deep-blue - 30%;
+			text-decoration: none;
+		}
+	}
+	
 }
 
 .search-story{

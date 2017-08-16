@@ -55,8 +55,17 @@ get_header(); // подключаем header.php ?>
 					<?php endwhile; // конец цикла ?>
 					
 					<div class="add-block">
-					<?php previous_post_link('%link', '<- Предыдущий пост: %title', TRUE); ?> 
-					<?php next_post_link('%link', 'Следующий пост: %title ->', TRUE); ?> 
+					<div class="other-posts">
+						<?php previous_post_link('%link', '
+							<svg class="icon icon-arrow-left">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+							</svg>
+							Предыдущий пост: %title', TRUE); ?> 
+
+						<?php next_post_link('%link', 'Следующий пост: %title <svg class="icon icon-arrow-right">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
+							</svg>', TRUE); ?> 
+					</div>
 					<?php if (comments_open() || get_comments_number()) comments_template('', true); // если комментирование открыто - мы покажем список комментариев и форму, если закрыто, но кол-во комментов > 0 - покажем только список комментариев ?>
 					</div>
 				</div>

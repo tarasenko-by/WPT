@@ -534,6 +534,53 @@ header .navbar ul li.active a {
   z-index: 2;
   width: 100%;
 }
+.story .col-sm-12 h2 {
+  margin: 20px 0px;
+}
+.story .col-sm-12 h2 a {
+  color: #6e96ff;
+  font-weight: 600;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.story .col-sm-12 .info {
+  margin-top: 20px;
+}
+.story .col-sm-12 .info .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  fill: #959fbb;
+}
+.story .col-sm-12 .info .date {
+  float: left;
+  width: 50%;
+  color: #959fbb;
+}
+.story .col-sm-12 .info .date .icon {
+  position: relative;
+  top: 2px;
+}
+.story .col-sm-12 .info .category {
+  float: left;
+  width: 50%;
+  font-size: 14px;
+}
+.story .col-sm-12 .info .category .icon {
+  position: relative;
+  top: 3px;
+}
+.story .col-sm-12 .info .category a {
+  color: #959fbb;
+  font-weight: normal;
+  font-size: 14px;
+  display: inline-block;
+}
+.story .col-sm-12 .info .category a:hover {
+  text-decoration: none;
+}
 .story .col-sm-5:after {
   content: " ";
   display: block;
@@ -562,7 +609,7 @@ header .navbar ul li.active a {
   line-height: 1.3;
 }
 .story .col-sm-7 .info {
-  margin-top: 2 0px;
+  margin-top: 20px;
 }
 .story .col-sm-7 .info .icon {
   width: 14px;
@@ -677,6 +724,34 @@ header .navbar ul li.active a {
 .full-story .meta-block .share {
   margin-top: 15px;
   text-align: right;
+}
+.other-posts {
+  margin-bottom: 30px;
+}
+.other-posts a {
+  background: #6e96ff;
+  padding: 10px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+.other-posts a .icon {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 5px;
+  fill: #fff;
+}
+.other-posts a .icon-arrow-left {
+  margin-right: 8px;
+}
+.other-posts a .icon-arrow-right {
+  margin-left: 8px;
+}
+.other-posts a:hover,
+.other-posts a:focus {
+  background: #5078e1;
+  text-decoration: none;
 }
 .search-story {
   border-top: 1px solid #eee;
