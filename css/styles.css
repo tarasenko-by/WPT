@@ -281,10 +281,16 @@ strong {
 }
 blockquote {
   background: #f1f1f1;
-  padding: 20px;
+  padding: 20px 20px 1px;
   margin: 10px 0px;
   border-left: 2px solid #6e96ff;
   border-radius: 0px 4px 4px 0px;
+}
+blockquote em {
+  font-style: italic;
+}
+code {
+  font-family: monospace;
 }
 /*============================================ 
 	Основные блоки
@@ -653,32 +659,52 @@ header .navbar ul li.active a {
 .full-story a.btn {
   color: #fff;
 }
+.full-story h1,
+.full-story .h1 {
+  font-size: 24px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
 .full-story h2,
 .full-story .h2 {
   font-size: 22px !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-top: 10px;
 }
 .full-story h3,
 .full-story .h3 {
   font-size: 20px !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-top: 10px;
 }
 .full-story h4,
 .full-story .h4 {
   font-size: 18px !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-top: 10px;
 }
 .full-story h5,
 .full-story .h5 {
   font-size: 16px !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-top: 10px;
+}
+.full-story h6,
+.full-story .h6 {
+  font-size: 14px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-weight: bold;
 }
 .full-story ul {
   list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+.full-story ol {
+  list-style-type: decimal;
+  list-style-position: inside;
   margin-bottom: 5px;
   padding-top: 10px;
 }
@@ -699,6 +725,8 @@ header .navbar ul li.active a {
 }
 .full-story .title {
   font-size: 24px;
+  padding: 0px;
+  margin: 0px;
 }
 .full-story .info {
   margin-top: 0px;
@@ -710,8 +738,7 @@ header .navbar ul li.active a {
 }
 .full-story .meta-block {
   border-top: 1px solid #eee;
-  margin: 0px;
-  margin-top: 40px;
+  margin: 40px 0px 10px;
 }
 .full-story .meta-block .meta {
   color: #434f74;
@@ -720,6 +747,9 @@ header .navbar ul li.active a {
 }
 .full-story .meta-block .meta ul {
   margin-bottom: 5px;
+}
+.full-story .meta-block p {
+  margin-bottom: 0px;
 }
 .full-story .meta-block .share {
   margin-top: 15px;
@@ -815,6 +845,9 @@ header .navbar ul li.active a {
 /*============================================ 
 	Комментарии
 ============================================*/
+#comments {
+  padding-top: 20px;
+}
 #comments h2 {
   font-size: 20px;
   margin-bottom: 20px;
@@ -843,7 +876,7 @@ header .navbar ul li.active a {
   padding-top: 20px;
 }
 #respond {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 #respond h3 {

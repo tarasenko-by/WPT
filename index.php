@@ -48,7 +48,7 @@ get_header(); // подключаем header.php ?>
 						endif; ?></h1>
 						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
-					    <?php   if( get_theme_mod('them_preview_image_size')== 'left') {
+						<?php if( get_theme_mod('them_preview_image_size')== 'left') {
 
 							  get_template_part('loop'); 
 								}

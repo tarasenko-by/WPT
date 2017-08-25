@@ -85,10 +85,18 @@ h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
 
 	blockquote{
 		background: #f1f1f1;
-		padding: 20px;
+		padding: 20px 20px 1px;
 		margin: 10px 0px;
 		border-left: 2px solid @deep-blue;
 		border-radius: 0px 4px 4px 0px;
+
+		em{
+			font-style: italic;
+		}
+	}
+
+	code{
+		font-family: monospace;
 	}
 
 
@@ -562,13 +570,23 @@ header{
 		}
 	}
 
-	h2, .h2 { font-size: 22px !important; margin-bottom: 20px; padding-top: 10px;}
-	h3, .h3 { font-size: 20px !important; margin-bottom: 20px; padding-top: 10px;}
-	h4, .h4 { font-size: 18px !important; margin-bottom: 20px; padding-top: 10px;}
-	h5, .h5 { font-size: 16px !important; margin-bottom: 20px; padding-top: 10px;}
+	h1, .h1 { font-size: 24px !important; margin-bottom: 10px; padding-top: 10px;}
+	h2, .h2 { font-size: 22px !important; margin-bottom: 10px; padding-top: 10px;}
+	h3, .h3 { font-size: 20px !important; margin-bottom: 10px; padding-top: 10px;}
+	h4, .h4 { font-size: 18px !important; margin-bottom: 10px; padding-top: 10px;}
+	h5, .h5 { font-size: 16px !important; margin-bottom: 10px; padding-top: 10px;}
+	h6, .h6 { font-size: 14px !important; margin-bottom: 10px; padding-top: 10px; font-weight: bold;}
 
 	ul{
 		list-style-type: disc;
+		list-style-position: inside;
+		margin-bottom: 5px;
+		padding-top: 10px;
+	}
+
+	ol{
+		list-style-type: decimal;
+		list-style-position: inside;
 		margin-bottom: 5px;
 		padding-top: 10px;
 	}
@@ -592,6 +610,7 @@ header{
 
 	.title{
 		font-size: 24px;
+		.pmn;
 	}
 
 	.info{
@@ -606,8 +625,7 @@ header{
 
 	.meta-block{
 		border-top: 1px solid #eee;
-		margin: 0px;
-		margin-top: 40px;
+		margin: 40px 0px 10px;
 
 		.meta{
 			color: @blue;
@@ -617,6 +635,10 @@ header{
 			ul{
 				margin-bottom: 5px;
 			}
+		}
+
+		p{
+			margin-bottom: 0px;
 		}
 
 		.share{
@@ -744,6 +766,8 @@ header{
 	Комментарии
 ============================================*/
 #comments{
+	padding-top: 20px;
+
 	h2{
 		font-size: 20px;
 		margin-bottom: 20px;
@@ -790,7 +814,7 @@ header{
 }
 
 #respond{
-	margin-top: 40px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 
 	h3{
