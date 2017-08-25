@@ -286,7 +286,8 @@ blockquote {
   border-left: 2px solid #6e96ff;
   border-radius: 0px 4px 4px 0px;
 }
-blockquote em {
+blockquote em,
+blockquote i {
   font-style: italic;
 }
 blockquote p {
