@@ -39,7 +39,15 @@ get_header(); // подключаем header.php ?>
 						<h3><?php single_cat_title(); // название категории ?></h3>
 						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
-							<?php get_template_part('loop'); // для отображения каждой записи берем шаблон loop.php ?>
+					  <?php   if( get_theme_mod('them_preview_image_size')== 'left') {
+
+							  get_template_part('loop'); 
+								}
+							else
+							{
+							  get_template_part('loop3');
+							}
+							// для отображения каждой записи берем шаблон loop.php ?>
 						<?php endwhile; // конец цикла
 
 						else: echo '<p>Нет записей.</p>'; endif; // если записей нет, напишим "простите" ?>	 

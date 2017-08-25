@@ -10,7 +10,7 @@
 	<?php if ( has_post_thumbnail() ) { ?>
 			<div class="col-sm-12 pmn">
 				<a href="<?php the_permalink(); ?>">
-					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-responsive">
+					<img src="<?php echo get_the_post_thumbnail_url(null,"big-thumb"); ?>" alt="" class="img-responsive">
 				</a>
 			</div>
 		<?php } ?>

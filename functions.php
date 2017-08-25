@@ -14,7 +14,7 @@ register_nav_menus(array( // Регистрируем 2 меню
 
 add_theme_support('post-thumbnails'); // включаем поддержку миниатюр
 set_post_thumbnail_size(300, 250); // задаем размер миниатюрам 250x150
-add_image_size('big-thumb', 400, 400, true); // добавляем еще один размер картинкам 400x400 с обрезкой
+add_image_size('big-thumb', 400, 300, true); // добавляем еще один размер картинкам 400x400 с обрезкой
 
 register_sidebar(array( // регистрируем левую колонку, этот кусок можно повторять для добавления новых областей для виджитов
 	'name' => 'Сайдбар', // Название в админке
@@ -243,4 +243,37 @@ add_action('customize_register', function($customizer) {
 			)
 		);
 	});
+
+add_action('customize_register', function($customizer){
+    $customizer->add_section(
+        'example_section_one',
+        array(
+            'title' => 'Настройка Превью',
+            'description' => 'Размер изображения',
+            'priority' => 11,
+        )
+    );
+  
+  $customizer->add_setting(
+    'them_preview_image_size',
+    array('default' => 'left')
+);
+  $customizer->add_control(
+    'them_preview_image_size',
+    array(
+        'type' => 'select',
+        'label' => 'Размер изображения',
+        'section' => 'example_section_one',
+        'choices' => array(
+            'left'=>'Слева' ,
+            'center'=>'Во всю ширину' 
+        ),
+    )
+);
+});
+
+
+
+
+
 ?>

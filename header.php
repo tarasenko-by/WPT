@@ -24,6 +24,16 @@
 	<![endif]-->
 	
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9032220952794982",
+    enable_page_level_ads: true
+  });
+</script>
+  
+  
 </head>
 <body <?php body_class(); // все классы для body ?>>
 <div id="top"></div>

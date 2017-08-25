@@ -60,9 +60,9 @@ get_header(); // подключаем header.php ?>
 							<svg class="icon icon-arrow-left">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
 							</svg>
-							Предыдущий пост: %title', TRUE); ?> 
+							 %title', TRUE); ?> 
 
-						<?php next_post_link('%link', 'Следующий пост: %title <svg class="icon icon-arrow-right">
+						<?php next_post_link('%link', '%title <svg class="icon icon-arrow-right">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
 							</svg>', TRUE); ?> 
 					</div>
