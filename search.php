@@ -39,29 +39,16 @@ get_header(); // подключаем header.php ?>
 
 						<h3><?php printf('Поиск по строке: %s', get_search_query()); ?></h3>
 						
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-							
-							<article id="post-<?php the_ID(); ?>" <?php post_class('search-story row pmn'); ?>>
-								<div class="col-sm-12 pmn">
+						<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
+						<?php if( get_theme_mod('them_preview_image_size')== 'left') {
 
-									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-									<?php the_content(''); // пост превью, до more ?>
-
-									<div class="info">
-											<div class="date">
-												<p><?php the_time(get_option('date_format')." в ".get_option('time_format')); ?></p> <?php // дата и время создания ?>
-											</div>
-
-										<div class="category text-right">
-											<?php the_category(',') ?><?php // ссылки на категории в которых опубликован пост, через зпт ?>
-										</div>
-
-										<div class="clearfix"></div>
-									</div>
-								</div>
-							</article>
-
+							  get_template_part('loop'); 
+								}
+							else
+							{
+							  get_template_part('loop3');
+							}
+						 ?>
 						<?php endwhile; // конец цикла
 
 						else: echo '<p>Нет записей.</p>'; endif; // если записей нет, напишим "простите" ?>	 

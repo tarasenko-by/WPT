@@ -806,6 +806,9 @@ header .navbar ul li.active a {
 .page h1.title {
   margin-bottom: 20px;
 }
+.story.page .info {
+  display: none;
+}
 .error-page h2 {
   font-size: 42px;
 }
