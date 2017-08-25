@@ -289,6 +289,9 @@ blockquote {
 blockquote em {
   font-style: italic;
 }
+blockquote p {
+  margin-bottom: 20px;
+}
 code {
   font-family: monospace;
 }
