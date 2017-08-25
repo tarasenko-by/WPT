@@ -843,8 +843,79 @@ header .navbar ul li.active a {
 .search-story .info .category a:hover {
   text-decoration: none;
 }
-.page h1.title {
+.block.page h1,
+.block.page .h1 {
+  font-size: 24px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  display: inline-block;
+}
+.block.page h2,
+.block.page .h2 {
+  font-size: 22px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  display: inline-block;
+}
+.block.page h3,
+.block.page .h3 {
+  font-size: 20px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  display: inline-block;
+}
+.block.page h4,
+.block.page .h4 {
+  font-size: 18px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  display: inline-block;
+}
+.block.page h5,
+.block.page .h5 {
+  font-size: 16px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  display: inline-block;
+}
+.block.page h6,
+.block.page .h6 {
+  font-size: 14px !important;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+  display: inline-block;
+}
+.block.page h1.title {
   margin-bottom: 20px;
+  display: block;
+}
+.block.page ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+.block.page ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+.block.page p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.block.page strong,
+.block.page b {
+  font-weight: 600;
+}
+.block.page img {
+  margin: 20px 0px;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 .story.page .info {
   display: none;
