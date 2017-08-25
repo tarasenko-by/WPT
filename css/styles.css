@@ -667,30 +667,35 @@ header .navbar ul li.active a {
   font-size: 24px !important;
   margin-bottom: 10px;
   padding-top: 10px;
+  display: inline-block;
 }
 .full-story h2,
 .full-story .h2 {
   font-size: 22px !important;
   margin-bottom: 10px;
   padding-top: 10px;
+  display: inline-block;
 }
 .full-story h3,
 .full-story .h3 {
   font-size: 20px !important;
   margin-bottom: 10px;
   padding-top: 10px;
+  display: inline-block;
 }
 .full-story h4,
 .full-story .h4 {
   font-size: 18px !important;
   margin-bottom: 10px;
   padding-top: 10px;
+  display: inline-block;
 }
 .full-story h5,
 .full-story .h5 {
   font-size: 16px !important;
   margin-bottom: 10px;
   padding-top: 10px;
+  display: inline-block;
 }
 .full-story h6,
 .full-story .h6 {
@@ -698,6 +703,7 @@ header .navbar ul li.active a {
   margin-bottom: 10px;
   padding-top: 10px;
   font-weight: bold;
+  display: inline-block;
 }
 .full-story ul {
   list-style-type: disc;
