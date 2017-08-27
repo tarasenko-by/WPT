@@ -1,8 +1,8 @@
 <?php
 /**
- * Шаблон формы поиска (searchform.php)
+ * Search emplate (searchform.php)
  * @package WordPress
- * @subpackage your-clean-template-3
+ * @subpackage Antares
  */
 ?>
 <form role="search" method="get" class="search-form form-inline" action="<?php echo home_url( '/' ); ?>">

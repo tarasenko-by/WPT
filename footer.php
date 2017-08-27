@@ -1,8 +1,8 @@
 <?php
 /**
- * Шаблон подвала (footer.php)
+ * Footer template (footer.php)
  * @package WordPress
- * @subpackage your-clean-template-3
+ * @subpackage Antares
  */
 ?>
 <footer class="container-fluid footer">
@@ -26,12 +26,11 @@
 </footer>
 
 
-<?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
+<?php wp_footer();?>
 
 
 <script>
 
-// Подключаем SVG-иконки
 jQuery(function($){
 	$.get('<?php echo get_template_directory_uri(); ?>/images/icons.svg', function(data) {
 		var div = document.createElement("div");
@@ -40,7 +39,6 @@ jQuery(function($){
 	});
 });
 
-// Планость ссылок
 $(function(){
 	$(document).ready(function() {
 		$("#upper").click(function() {

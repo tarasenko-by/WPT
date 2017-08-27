@@ -1,8 +1,8 @@
 <?php
 /**
- * Запись в цикле (loop.php)
+ * Loop (loop.php)
  * @package WordPress
- * @subpackage your-clean-template-3
+ * @subpackage Antares
  */ 
 ?>
 

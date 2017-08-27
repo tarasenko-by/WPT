@@ -1,18 +1,18 @@
 /*   
 Theme Name: Creade
 Version: 1.2
-Tags: clean, development, html5, bootstrap, creade
-Description: Wordpress them for Creade Project
+Tags: clean, development, html5, bootstrap, blog, articles
+Description: Wordpress them for Blog
 Author: Sergei Tarasenko
 Author URI: http://Creade.ru
 */
 
 
 @media (min-width: 979px) { 
-	ul.nav li.dropdown.show-on-hover:hover > ul.dropdown-menu { /* для раскрывания субменю по наведению */
+	ul.nav li.dropdown.show-on-hover:hover > ul.dropdown-menu { 
 		display: block;
 	}
-	.comment-list .children { /* для комментов */
+	.comment-list .children { 
 		padding: 0;
 		margin-left: 74px;
 		padding-bottom: 15px;
