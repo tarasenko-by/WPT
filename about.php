@@ -13,7 +13,7 @@
 			<?php echo get_theme_mod('about', ''); ?>
 		</p>
 		<p>
-			<?php echo get_theme_mod('Title', ''); ?>
+			<?php echo get_theme_mod('socialTitle', ''); ?>
 		</p>
 		<ul class="ul-ui ul-lsn ul-line">
 			<?php if ( get_theme_mod('social_network_vk', '') != '' ){ ?>

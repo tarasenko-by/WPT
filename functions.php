@@ -17,9 +17,9 @@ set_post_thumbnail_size(300, 250);
 add_image_size('big-thumb', 636, 200, true);
 
 register_sidebar(array(
-	'name' => 'Сайдбар',
+	'name' => 'Sidabar',
 	'id' => "sidebar",
-	'description' => 'Обычная колонка в сайдбаре',
+	'description' => 'Sidebar',
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' => "</div>\n",
 	'before_title' => '<span class="widgettitle">',
@@ -39,17 +39,17 @@ if (!class_exists('clean_comments_constructor')) {
 			echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n";
 			echo '<div class="media-left">'.get_avatar($comment, 64, '', get_comment_author(), array('class' => 'media-object'))."</div>\n";
 			echo '<div class="media-body">';
-			echo '<span class="meta media-heading">Автор: '.get_comment_author()."\n";
+			echo '<span class="meta media-heading">Author: '.get_comment_author()."\n";
 			echo '<small>';
 			echo 'Добавлено: '.get_comment_date('F j, Y в H:i')."\n";
 			echo '</small>';
-			if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n";
+			if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Your comment will be published after moderator verification.</em>'."\n";
 			echo "</span>";
 			comment_text()."\n";
 			$reply_link_args = array(
 				'depth' => $depth,
-				'reply_text' => 'Ответить',
-				'login_text' => 'Вы должны быть залогинены'
+				'reply_text' => 'Reply',
+				'login_text' => 'You must be logged in'
 			);
 			echo get_comment_reply_link(array_merge($args, $reply_link_args));
 			echo '</div>'."\n"; // закрываем див
@@ -69,8 +69,8 @@ if (!function_exists('pagination')) {
 			'format' => '?paged=%#%',
 			'current' => max(1, get_query_var('paged')),
 			'type' => 'array',
-			'prev_text'    => 'Назад',
-			'next_text'    => 'Вперед',
+			'prev_text'    => 'Previous',
+			'next_text'    => 'Next',
 			'total' => $wp_query->max_num_pages,
 			'show_all'     => false,
 			'end_size'     => 15,
@@ -167,7 +167,7 @@ function the_breadcrumb() {
 	if (!is_home()) {
 		echo '<li><a href="';
 		echo get_option('home').'">';
-		echo 'Главная';
+		echo 'Home';
 		echo "</a> <span class='divider'>/</span></li> ";
 		if (is_category() || is_single()) {
 			echo "<li>";
@@ -185,16 +185,16 @@ function the_breadcrumb() {
 			echo "</li>";
 		}
 		  elseif (is_tag()) {
-			echo 'Записи с меткой "';
+			echo 'Posts Tagged "';
 			single_tag_title();
 			echo '"'; }
-		elseif (is_day()) {echo "Архив за"; the_time('  jS F Y');}
-		elseif (is_month()) {echo "Архив "; the_time(' F  Y');}
-		elseif (is_year()) {echo "Архив за "; the_time(' Y');}
-		elseif (is_author()) {echo "Архив автора";}
-		elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "Архив блога";}
-		elseif (is_search()) {echo "Результаты поиска";}
-		elseif (is_404()) { echo '404 - Страница не найдена';}
+		elseif (is_day()) {echo "Archive for"; the_time('  jS F Y');}
+		elseif (is_month()) {echo "Archive "; the_time(' F  Y');}
+		elseif (is_year()) {echo "Archive for "; the_time(' Y');}
+		elseif (is_author()) {echo "Author Archive";}
+		elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "Blog Archive";}
+		elseif (is_search()) {echo "Search results";}
+		elseif (is_404()) { echo '404 - Page not found';}
 	}
 }
 

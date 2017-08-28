@@ -55,8 +55,8 @@
 					<nav class="navbar">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnav" aria-expanded="false">
-								<span class="sr-only">Меню</span>
-								Меню
+								<span class="sr-only">Menu</span>
+								Menu
 							</button>
 						</div>
 						<div class="collapse navbar-collapse " id="topnav">

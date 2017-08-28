@@ -22,13 +22,13 @@ get_header();?>
 				<div class="content-block">
 					<div class="content-wrapper">
 
-						<h3><?php printf('Посты с тэгом: %s', single_tag_title('', false));?></h3>
+						<h3><?php printf('Posts with tag: %s', single_tag_title('', false));?></h3>
 						
 						<?php if (have_posts()) : while (have_posts()) : the_post();?>
 							<?php get_template_part('loop'); ?>
 						<?php endwhile; 
 
-						else: echo '<p>Нет записей.</p>'; endif;?>	 
+						else: echo '<p>There are no posts.</p>'; endif;?>	 
 						<?php pagination();?>
 					</div>
 				</div>

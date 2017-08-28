@@ -27,7 +27,7 @@ get_header();?>
 							<h1 class="pmn title"><?php the_title();?></h1>
 							<div class="info">
 								<time class="date grey" datetime="<?php the_time(get_option('date_format')." в ".get_option('time_format')); ?>">
-									<?php the_time(get_option('date_format')." в ".get_option('time_format')); ?>
+									<?php the_time(get_option('date_format')." / ".get_option('time_format')); ?>
 								</time>
 
 						
@@ -36,10 +36,10 @@ get_header();?>
 							<div class="meta-block row">
 								<div class="meta col-sm-6 pmn">
 									<ul class="ul-ui ul-line">
-										<li><p>Автор:  <?php the_author_posts_link(); ?></p></li>
-										<li><p>Категории: <?php the_category(',') ?></p></li>
+										<li><p>Author:  <?php the_author_posts_link(); ?></p></li>
+										<li><p>Category: <?php the_category(',') ?></p></li>
 									</ul>
-									<?php the_tags('<p>Тэги: ', ',', '</p>');?>
+									<?php the_tags('<p>Tags: ', ',', '</p>');?>
 								</div>
 								<div class="share col-sm-6 pmn">
 									<!-- Ya.Share -->

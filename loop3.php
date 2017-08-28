@@ -22,7 +22,7 @@
 
 		<div class="info">
 				<div class="date">
-					<p><?php the_time(get_option('date_format')." в ".get_option('time_format')); ?></p>
+					<p><?php the_time(get_option('date_format')." / ".get_option('time_format')); ?></p>
 				</div>
 
 			<div class="category text-right">

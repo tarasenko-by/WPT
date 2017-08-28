@@ -34,7 +34,7 @@ get_header();?>
 							?>
 						<?php endwhile;
 
-						else: echo '<p>Нет записей.</p>'; endif;?>
+						else: echo '<p>There are no posts.</p>'; endif;?>
 						<?php pagination();?>
 					</div>
 				</div>

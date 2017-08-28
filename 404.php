@@ -24,9 +24,9 @@ get_header();?>
 				<div class="content-block">
 					<div class="content-wrapper">
 							<article class="block error-page page text-center">
-								<h2>Ой, это 404!</h2>
+								<h2>Oh, this is 404!</h2>
 								<img src="/wp-content/themes/WPT/images/404.jpg" alt="" class="img-responsive img-center">
-								<a href="/" class="btn btn-blue btn-big">Вернуть на главную</a>
+								<a href="/" class="btn btn-blue btn-big">Return to home page</a>
 							</article>
 					</div>
 				</div>

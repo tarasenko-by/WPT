@@ -23,7 +23,7 @@ get_header();?>
 
 						<h3><?php  //
 							if (is_day()) : printf('Daily Archives: %s', get_the_date());
-							elseif (is_month()) : printf('Архив за: %s', get_the_date('F Y'));
+							elseif (is_month()) : printf('Archive for: %s', get_the_date('F Y'));
 							elseif (is_year()) : printf('Yearly Archives: %s', get_the_date('Y'));
 							else : 'Archives';
 						endif; ?></h3>
@@ -32,7 +32,7 @@ get_header();?>
 							<?php get_template_part('loop');?>
 						<?php endwhile;
 
-						else: echo '<p>Нет записей.</p>'; endif;?>
+						else: echo '<p>There are no posts.</p>'; endif;?>
 						<?php pagination();?>
 					</div>
 				</div>
