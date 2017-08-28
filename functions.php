@@ -202,14 +202,14 @@ function the_breadcrumb() {
 add_action('customize_register', function($customizer) {
 	$customizer->add_section(
 		'about_author', array(
-			'title' => 'О авторе',
-			'description' => 'Информация о авторе',
+			'title' => 'About',
+			'description' => 'About author',
 			'priority' => 11,
 		)
 	);
 
 	 $customizer->add_setting(
-		'aboutTitle', array('default' => 'Немного обо мне')
+		'aboutTitle', array('default' => 'About Title')
 	);
 	$customizer->add_control(
 		'aboutTitle', array(
@@ -221,7 +221,7 @@ add_action('customize_register', function($customizer) {
 
 	$customizer->add_setting(
 		'about', array(
-			'default' => 'Меня зовут Сергей Тарасенко и я занимаюсь UX/UI и web-дизайном. В свободное время делиюсь свои опытом в блоге и на YouTube канале.'
+			'default' => 'About Text.'
 		)
 	);
 	$customizer->add_control(
