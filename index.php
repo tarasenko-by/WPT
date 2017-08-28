@@ -4,7 +4,7 @@
  * @package WordPress
  * @subpackage Antares
  */
-get_header(); ?> 
+get_header(); ?>
 
 <section>
 	<div class="container">
@@ -15,9 +15,13 @@ get_header(); ?>
 			<div class="<?php content_class_by_sidebar();?> content">
 
 				<div class="slide">
+					<?php if (get_theme_mod('authorPhoto', '') != '' ) { ?>
 					<div class="col-sm-2 pmn">
+
 						<img src="<?php echo get_theme_mod('authorPhoto', ''); ?>" alt="" class="img-responsive">
+
 					</div>
+					<?php } ?>
 					<div class="col-sm-10">
 
 
@@ -29,9 +33,22 @@ get_header(); ?>
 							Подпишись на обновления:
 						</p>
 						<ul class="ul-ui ul-lsn ul-line">
-							<li class="vk"><a href="/">VK.com</a></li>
-							<li class="youtube"><a href="/">YouTube</a></li>
-							<li class="telegram"><a href="/">Telegram</a></li>
+							<?php if ( get_theme_mod('social_network_vk', '') != '' { ?>
+							<li class="vk"><a href="<?php echo  get_theme_mod('social_network_vk'); ?>">VK.com</a></li>
+							<?php } ?>
+							<?php if ( get_theme_mod('social_network_youtube', '') != '' { ?>
+							<li class="youtube"><a href="<?php echo  get_theme_mod('social_network_youtube'); ?>">YouTube</a></li>
+							<?php } ?>
+							<?php if ( get_theme_mod('social_network_telegramm', '') != '' { ?>
+							<li class="telegram"><a href="<?php echo get_theme_mod('social_network_telegramm'); ?>">Telegram</a></li>
+							<?php } ?>
+
+							<?php if ( get_theme_mod('social_network_fb', '') != '' { ?>
+							<li class="telegram"><a href="<?php echo  get_theme_mod('social_network_fb'); ?>">Fasebook</a></li>
+							<?php } ?>
+							<?php if ( get_theme_mod('social_network_twitter', '') != '' { ?>
+							<li class="telegram"><a href="<?php echo get_theme_mod('social_network_twitter'); ?>">Twitter</a></li>
+							<?php } ?>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -46,18 +63,18 @@ get_header(); ?>
 							elseif (is_year()) : printf('Yearly Archives: %s', get_the_date('Y'));
 							else : 'Archives';
 						endif; ?></h1>
-						
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<?php if( get_theme_mod('them_preview_image_size')== 'left') {
 
-							  get_template_part('loop'); 
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php if( get_theme_mod('them_preview_image_size')== 'small') {
+
+							  get_template_part('loop');
 								}
 							else
 							{
 							  get_template_part('loop3');
 							}
 						 ?>
-						<?php endwhile; 
+						<?php endwhile;
 
 						else: echo '<p>Нет записей.</p>'; endif;?>
 						<?php pagination(); ?>
