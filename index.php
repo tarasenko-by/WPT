@@ -33,20 +33,20 @@ get_header(); ?>
 							Подпишись на обновления:
 						</p>
 						<ul class="ul-ui ul-lsn ul-line">
-							<?php if ( get_theme_mod('social_network_vk', '') != '' { ?>
+							<?php if ( get_theme_mod('social_network_vk', '') != '' ){ ?>
 							<li class="vk"><a href="<?php echo  get_theme_mod('social_network_vk'); ?>">VK.com</a></li>
 							<?php } ?>
-							<?php if ( get_theme_mod('social_network_youtube', '') != '' { ?>
+							<?php if ( get_theme_mod('social_network_youtube', '') != '' ){ ?>
 							<li class="youtube"><a href="<?php echo  get_theme_mod('social_network_youtube'); ?>">YouTube</a></li>
 							<?php } ?>
-							<?php if ( get_theme_mod('social_network_telegramm', '') != '' { ?>
+							<?php if ( get_theme_mod('social_network_telegramm', '') != '' ){ ?>
 							<li class="telegram"><a href="<?php echo get_theme_mod('social_network_telegramm'); ?>">Telegram</a></li>
 							<?php } ?>
 
-							<?php if ( get_theme_mod('social_network_fb', '') != '' { ?>
-							<li class="telegram"><a href="<?php echo  get_theme_mod('social_network_fb'); ?>">Fasebook</a></li>
+							<?php if ( get_theme_mod('social_network_fb', '') != '' ){ ?>
+							<li class="telegram"><a href="<?php echo  get_theme_mod('social_network_fb'); ?>">Faсebook</a></li>
 							<?php } ?>
-							<?php if ( get_theme_mod('social_network_twitter', '') != '' { ?>
+							<?php if ( get_theme_mod('social_network_twitter', '') != '' ){ ?>
 							<li class="telegram"><a href="<?php echo get_theme_mod('social_network_twitter'); ?>">Twitter</a></li>
 							<?php } ?>
 						</ul>

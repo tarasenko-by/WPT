@@ -277,7 +277,7 @@ add_action('customize_register', function($customizer) {
 	);
 	$customizer->add_control(
 		'social_network_youtube', array(
-			'label' => 'YouTobe',
+			'label' => 'YouTube',
 			'section' => 'about_author',
 			'type' => 'text',
 		)
