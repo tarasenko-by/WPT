@@ -208,7 +208,18 @@ add_action('customize_register', function($customizer) {
 		)
 	);
 
-	 $customizer->add_setting(
+	$customizer->add_setting('authorPhoto');
+	$customizer->add_control(
+		new WP_Customize_Upload_Control(
+			$customizer, 'authorPhoto', array(
+				'label' => 'Author Photo',
+				'section' => 'about_author',
+				'settings' => 'authorPhoto'
+			)
+		)
+	);
+
+ 	$customizer->add_setting(
 		'aboutTitle', array('default' => 'About Title')
 	);
 	$customizer->add_control(
@@ -232,15 +243,15 @@ add_action('customize_register', function($customizer) {
 		)
 	);
 
+	$customizer->add_setting(
+		'socialTitle', array('default' => 'Social networks')
+	);
 
-	$customizer->add_setting('authorPhoto');
 	$customizer->add_control(
-		new WP_Customize_Upload_Control(
-			$customizer, 'authorPhoto', array(
-				'label' => 'Author Photo',
-				'section' => 'about_author',
-				'settings' => 'authorPhoto'
-			)
+		'socialTitle', array(
+			'label' => 'Socail Title',
+			'section' => 'socail_Title',
+			'type' => 'text',
 		)
 	);
 

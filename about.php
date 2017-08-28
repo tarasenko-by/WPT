@@ -13,7 +13,7 @@
 			<?php echo get_theme_mod('about', ''); ?>
 		</p>
 		<p>
-			Подпишись на обновления:
+			<?php echo get_theme_mod('Title', ''); ?>
 		</p>
 		<ul class="ul-ui ul-lsn ul-line">
 			<?php if ( get_theme_mod('social_network_vk', '') != '' ){ ?>
@@ -27,10 +27,10 @@
 			<?php } ?>
 
 			<?php if ( get_theme_mod('social_network_fb', '') != '' ){ ?>
-			<li class="telegram"><a href="<?php echo  get_theme_mod('social_network_fb'); ?>">Faсebook</a></li>
+			<li class="facebook"><a href="<?php echo  get_theme_mod('social_network_fb'); ?>">Faсebook</a></li>
 			<?php } ?>
 			<?php if ( get_theme_mod('social_network_twitter', '') != '' ){ ?>
-			<li class="telegram"><a href="<?php echo get_theme_mod('social_network_twitter'); ?>">Twitter</a></li>
+			<li class="twitter"><a href="<?php echo get_theme_mod('social_network_twitter'); ?>">Twitter</a></li>
 			<?php } ?>
 		</ul>
 	</div>
