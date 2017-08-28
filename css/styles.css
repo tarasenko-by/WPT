@@ -410,6 +410,18 @@ header .navbar ul li.active a {
   margin-bottom: 30px;
   display: block;
 }
+.sidebar .widget #wp-calendar {
+  width: 100%;
+  color: #959fbb;
+}
+.sidebar .widget #wp-calendar caption {
+  color: #434f74;
+  padding: 0px 0px 8px;
+}
+.sidebar .widget #wp-calendar #next {
+  text-align: right;
+  padding-right: 20px;
+}
 .sidebar .widget ul {
   font-weight: 500;
 }
