@@ -4,7 +4,7 @@
  * @package WordPress
  * @subpackage Antares
  */
-get_header();?> 
+get_header();?>
 
 <section>
 	<div class="container">
@@ -37,10 +37,10 @@ get_header();?>
 					<div class="content-wrapper">
 
 						<h3><?php single_cat_title();?></h3>
-						
+
 						<?php if (have_posts()) : while (have_posts()) : the_post();?>
-							<?php   if( get_theme_mod('them_preview_image_size')== 'left') {
-								get_template_part('loop'); 
+							<?php   if( get_theme_mod('them_preview_image_size')== 'small') {
+								get_template_part('loop');
 									}
 								else
 								{

@@ -5,156 +5,156 @@
  * @subpackage Antares
  */
 
-add_theme_support('title-tag'); 
+add_theme_support('title-tag');
 
 register_nav_menus(array(
-	'top' => 'Верхнее', 
-	'bottom' => 'Внизу' 
+	'top' => 'Верхнее',
+	'bottom' => 'Внизу'
 ));
 
-add_theme_support('post-thumbnails'); 
-set_post_thumbnail_size(300, 250); 
-add_image_size('big-thumb', 636, 200, true); 
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(300, 250);
+add_image_size('big-thumb', 636, 200, true);
 
-register_sidebar(array( 
+register_sidebar(array(
 	'name' => 'Сайдбар',
-	'id' => "sidebar", 
-	'description' => 'Обычная колонка в сайдбаре', 
-	'before_widget' => '<div id="%1$s" class="widget %2$s">', 
-	'after_widget' => "</div>\n", 
+	'id' => "sidebar",
+	'description' => 'Обычная колонка в сайдбаре',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => "</div>\n",
 	'before_title' => '<span class="widgettitle">',
 	'after_title' => "</span>\n",
 ));
 
 if (!class_exists('clean_comments_constructor')) {
-	class clean_comments_constructor extends Walker_Comment { 
-		public function start_lvl( &$output, $depth = 0, $args = array()) { 
+	class clean_comments_constructor extends Walker_Comment {
+		public function start_lvl( &$output, $depth = 0, $args = array()) {
 			$output .= '<ul class="children">' . "\n";
 		}
-		public function end_lvl( &$output, $depth = 0, $args = array()) { 
+		public function end_lvl( &$output, $depth = 0, $args = array()) {
 			$output .= "</ul><!-- .children -->\n";
 		}
-		protected function comment( $comment, $depth, $args ) { 
-			$classes = implode(' ', get_comment_class()).($comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : ''); 
-			echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n"; 
-			echo '<div class="media-left">'.get_avatar($comment, 64, '', get_comment_author(), array('class' => 'media-object'))."</div>\n"; 
+		protected function comment( $comment, $depth, $args ) {
+			$classes = implode(' ', get_comment_class()).($comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : '');
+			echo '<li id="comment-'.get_comment_ID().'" class="'.$classes.' media">'."\n";
+			echo '<div class="media-left">'.get_avatar($comment, 64, '', get_comment_author(), array('class' => 'media-object'))."</div>\n";
 			echo '<div class="media-body">';
 			echo '<span class="meta media-heading">Автор: '.get_comment_author()."\n";
 			echo '<small>';
 			echo 'Добавлено: '.get_comment_date('F j, Y в H:i')."\n";
 			echo '</small>';
-			if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n"; 
+			if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n";
 			echo "</span>";
 			comment_text()."\n";
-			$reply_link_args = array( 
+			$reply_link_args = array(
 				'depth' => $depth,
-				'reply_text' => 'Ответить', 
-				'login_text' => 'Вы должны быть залогинены' 
+				'reply_text' => 'Ответить',
+				'login_text' => 'Вы должны быть залогинены'
 			);
-			echo get_comment_reply_link(array_merge($args, $reply_link_args)); 
+			echo get_comment_reply_link(array_merge($args, $reply_link_args));
 			echo '</div>'."\n"; // закрываем див
 		}
-		public function end_el( &$output, $comment, $depth = 0, $args = array() ) { 
+		public function end_el( &$output, $comment, $depth = 0, $args = array() ) {
 			$output .= "</li><!-- #comment-## -->\n";
 		}
 	}
 }
 
-if (!function_exists('pagination')) { 
-	function pagination() { 
-		global $wp_query; 
-		$big = 999999999; 
-		$links = paginate_links(array( 
+if (!function_exists('pagination')) {
+	function pagination() {
+		global $wp_query;
+		$big = 999999999;
+		$links = paginate_links(array(
 			'base' => str_replace($big,'%#%',esc_url(get_pagenum_link($big))),
-			'format' => '?paged=%#%', 
+			'format' => '?paged=%#%',
 			'current' => max(1, get_query_var('paged')),
 			'type' => 'array',
-			'prev_text'    => 'Назад', 
+			'prev_text'    => 'Назад',
 			'next_text'    => 'Вперед',
 			'total' => $wp_query->max_num_pages,
 			'show_all'     => false,
-			'end_size'     => 15, 
-			'mid_size'     => 15, 
+			'end_size'     => 15,
+			'mid_size'     => 15,
 			'add_args'     => false,
-			'add_fragment' => '', 
-			'before_page_number' => '', 
-			'after_page_number' => '' 
+			'add_fragment' => '',
+			'before_page_number' => '',
+			'after_page_number' => ''
 		));
-		if( is_array( $links ) ) { 
+		if( is_array( $links ) ) {
 			echo '<ul class="pagination">';
 			foreach ( $links as $link ) {
-				if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>"; 
-				else echo "<li>$link</li>"; 
+				if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>";
+				else echo "<li>$link</li>";
 			}
 			echo '</ul>';
 		 }
 	}
 }
 
-add_action('wp_footer', 'add_scripts'); 
-if (!function_exists('add_scripts')) { 
-	function add_scripts() { 
-		if(is_admin()) return false; 
-		wp_deregister_script('jquery'); 
-		wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true); 
-		wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js','','',true); 
-		wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); 
+add_action('wp_footer', 'add_scripts');
+if (!function_exists('add_scripts')) {
+	function add_scripts() {
+		if(is_admin()) return false;
+		wp_deregister_script('jquery');
+		wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true);
+		wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js','','',true);
+		wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true);
 	}
 }
 
 add_action('wp_print_styles', 'add_styles');
 if (!function_exists('add_styles')) {
-	function add_styles() { 
-		if(is_admin()) return false; 
-		wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.css' ); 
-		wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); 
-		wp_enqueue_style( 'custom', get_template_directory_uri().'/css/styles.css' ); 
+	function add_styles() {
+		if(is_admin()) return false;
+		wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.css' );
+		wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' );
+		wp_enqueue_style( 'custom', get_template_directory_uri().'/css/styles.css' );
 		wp_enqueue_style( 'google', 'https://fonts.googleapis.com/css?family=Exo+2:300,400,400i,500,500i,600,600i,700,700i&amp;subset=cyrillic' );
 	}
 }
 
 if (!class_exists('bootstrap_menu')) {
-	class bootstrap_menu extends Walker_Nav_Menu { 
-		private $open_submenu_on_hover; 
+	class bootstrap_menu extends Walker_Nav_Menu {
+		private $open_submenu_on_hover;
 
-		function __construct($open_submenu_on_hover = true) { 
-			$this->open_submenu_on_hover = $open_submenu_on_hover; 
+		function __construct($open_submenu_on_hover = true) {
+			$this->open_submenu_on_hover = $open_submenu_on_hover;
 		}
 
-		function start_lvl(&$output, $depth = 0, $args = array()) { 
-			$output .= "\n<ul class=\"dropdown-menu\">\n"; 
+		function start_lvl(&$output, $depth = 0, $args = array()) {
+			$output .= "\n<ul class=\"dropdown-menu\">\n";
 		}
-		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) { 
-			$item_html = ''; 
-			parent::start_el($item_html, $item, $depth, $args); 
+		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+			$item_html = '';
+			parent::start_el($item_html, $item, $depth, $args);
 			if ( $item->is_dropdown && $depth === 0 ) {
-			   if (!$this->open_submenu_on_hover) $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"', $item_html); 
+			   if (!$this->open_submenu_on_hover) $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"', $item_html);
 			   $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
 			}
-			$output .= $item_html; 
+			$output .= $item_html;
 		}
-		function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) { 
+		function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
 			if ( $element->current ) $element->classes[] = 'active';
-			$element->is_dropdown = !empty( $children_elements[$element->ID] ); 
-			if ( $element->is_dropdown ) { 
-				if ( $depth === 0 ) { 
-					$element->classes[] = 'dropdown'; 
-					if ($this->open_submenu_on_hover) $element->classes[] = 'show-on-hover'; 
-				} elseif ( $depth === 1 ) { 
-					$element->classes[] = 'dropdown-submenu'; 
+			$element->is_dropdown = !empty( $children_elements[$element->ID] );
+			if ( $element->is_dropdown ) {
+				if ( $depth === 0 ) {
+					$element->classes[] = 'dropdown';
+					if ($this->open_submenu_on_hover) $element->classes[] = 'show-on-hover';
+				} elseif ( $depth === 1 ) {
+					$element->classes[] = 'dropdown-submenu';
 				}
 			}
-			parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output); 
+			parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
 		}
 	}
 }
 
-if (!function_exists('content_class_by_sidebar')) { 
-	function content_class_by_sidebar() { 
-		if (is_active_sidebar( 'sidebar' )) { 
+if (!function_exists('content_class_by_sidebar')) {
+	function content_class_by_sidebar() {
+		if (is_active_sidebar( 'sidebar' )) {
 			echo 'col-md-9';
-		} else { 
-			echo 'col-md-12'; 
+		} else {
+			echo 'col-md-12';
 		}
 	}
 }
@@ -185,7 +185,7 @@ function the_breadcrumb() {
 			echo "</li>";
 		}
 		  elseif (is_tag()) {
-			echo 'Записи с меткой "'; 
+			echo 'Записи с меткой "';
 			single_tag_title();
 			echo '"'; }
 		elseif (is_day()) {echo "Архив за"; the_time('  jS F Y');}
@@ -200,75 +200,146 @@ function the_breadcrumb() {
 
 
 add_action('customize_register', function($customizer) {
-		$customizer->add_section(
-			'about_author', array(
-				'title' => 'О авторе',
-				'description' => 'Информация о авторе',
-				'priority' => 11,
-			)
-		);
+	$customizer->add_section(
+		'about_author', array(
+			'title' => 'О авторе',
+			'description' => 'Информация о авторе',
+			'priority' => 11,
+		)
+	);
 
-		 $customizer->add_setting(
-			'aboutTitle', array('default' => 'Немного обо мне')
-		);
-		$customizer->add_control(
-			'aboutTitle', array(
-				'label' => 'About Title',
+	 $customizer->add_setting(
+		'aboutTitle', array('default' => 'Немного обо мне')
+	);
+	$customizer->add_control(
+		'aboutTitle', array(
+			'label' => 'About Title',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+
+	$customizer->add_setting(
+		'about', array(
+			'default' => 'Меня зовут Сергей Тарасенко и я занимаюсь UX/UI и web-дизайном. В свободное время делиюсь свои опытом в блоге и на YouTube канале.'
+		)
+	);
+	$customizer->add_control(
+		'about', array(
+			'label' => 'About Text',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+
+
+	$customizer->add_setting('authorPhoto');
+	$customizer->add_control(
+		new WP_Customize_Upload_Control(
+			$customizer, 'authorPhoto', array(
+				'label' => 'Author Photo',
 				'section' => 'about_author',
-				'type' => 'text',
+				'settings' => 'authorPhoto'
 			)
-		);
+		)
+	);
 
-		$customizer->add_setting(
-			'about', array('default' => 'Меня зовут Сергей Тарасенко и я занимаюсь UX/UI и web-дизайном. В свободное время делиюсь свои опытом в блоге и на YouTube канале.')
-		);
-		$customizer->add_control(
-			'about', array(
-				'label' => 'About Text',
-				'section' => 'about_author',
-				'type' => 'text',
-			)
-		);
-	
+	$customizer->add_setting(
+		'social_network_vk', array(
+			'default' => ''
+		)
+	);
+	$customizer->add_control(
+		'social_network_vk', array(
+			'label' => 'VK',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
 
-		$customizer->add_setting('authorPhoto');
-		$customizer->add_control(
-			new WP_Customize_Upload_Control(
-				$customizer, 'authorPhoto', array(
-					'label' => 'Author Photo',
-					'section' => 'about_author',
-					'settings' => 'authorPhoto'
-				)
-			)
-		);
-	});
+	$customizer->add_setting(
+		'social_network_fb', array(
+			'default' => ''
+		)
+	);
+	$customizer->add_control(
+		'social_network_fb', array(
+			'label' => 'Facebook',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+
+	$customizer->add_setting(
+		'social_network_youtube', array(
+			'default' => ''
+		)
+	);
+	$customizer->add_control(
+		'social_network_youtube', array(
+			'label' => 'YouTobe',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+
+	$customizer->add_setting(
+		'social_network_twitter', array(
+			'default' => ''
+		)
+	);
+	$customizer->add_control(
+		'social_network_twitter', array(
+			'label' => 'Twitter',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+
+	$customizer->add_setting(
+		'social_network_telegramm', array(
+			'default' => ''
+		)
+	);
+	$customizer->add_control(
+		'social_network_telegramm', array(
+			'label' => 'Telegramm',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+
+});
+
+
+
 
 add_action('customize_register', function($customizer){
-    $customizer->add_section(
-        'example_section_one',
-        array(
-            'title' => 'Настройка Превью',
-            'description' => 'Размер изображения',
-            'priority' => 11,
-        )
-    );
-  
+  $customizer->add_section(
+      'example_section_one',
+      array(
+          'title' => '',
+          'description' => 'Image size',
+          'priority' => 0,
+      )
+  );
+
   $customizer->add_setting(
     'them_preview_image_size',
-    array('default' => 'left')
-);
-  $customizer->add_control(
-    'them_preview_image_size',
-    array(
-        'type' => 'select',
-        'label' => 'Размер изображения',
-        'section' => 'example_section_one',
-        'choices' => array(
-            'left'=>'Слева' ,
-            'center'=>'Во всю ширину' 
-        ),
-    )
-);
+    array('default' => 'small')
+	);
+	  $customizer->add_control(
+	    'them_preview_image_size',
+	    array(
+	        'type' => 'select',
+	        'label' => 'Image size',
+	        'section' => 'example_section_one',
+	        'choices' => array(
+	            'small'=>'Small' ,
+	            'lagre'=>'Large'
+	        ),
+	    )
+	);
 });
 
 
