@@ -318,7 +318,7 @@ add_action('customize_register', function($customizer){
   $customizer->add_section(
       'example_section_one',
       array(
-          'title' => '',
+          'title' => 'Image size',
           'description' => 'Image size',
           'priority' => 0,
       )
