@@ -1096,3 +1096,37 @@ header .navbar ul li.active a {
     text-align: center;
   }
 }
+.consult .title {
+  font-size: 16px;
+}
+.consult .price {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.consult .price .title {
+  color: #fff;
+  padding: 10px 0px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px 5px 0px 0px;
+}
+.consult .price .title.min {
+  background: #8cb4ff;
+}
+.consult .price .title.stand {
+  background: #6e96ff;
+}
+.consult .price .title.max {
+  background: #5078e1;
+}
+.consult .price .text {
+  background: #f1f1f1;
+  padding: 20px 0px 10px;
+  text-align: center;
+}
+.consult .price .text strong {
+  font-weight: bold;
+}
+.consult .price a.btn {
+  padding: 10px 0px;
+}
