@@ -1096,37 +1096,59 @@ header .navbar ul li.active a {
     text-align: center;
   }
 }
-.consult .title {
-  font-size: 16px;
+.consult {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.consult div.title {
+  padding: 40px 40px 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.consult div.title h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.consult div.title p {
+  margin-bottom: 10px;
+}
+.consult div.title p strong {
+  font-weight: 600;
 }
 .consult .price {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.consult .price .title {
-  color: #fff;
-  padding: 10px 0px;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 5px 5px 0px 0px;
-}
-.consult .price .title.min {
-  background: #8cb4ff;
-}
-.consult .price .title.stand {
-  background: #6e96ff;
-}
-.consult .price .title.max {
-  background: #5078e1;
-}
-.consult .price .text {
-  background: #f1f1f1;
-  padding: 20px 0px 10px;
+  padding: 40px 40px 30px;
+  border-right: 1px solid #eee;
   text-align: center;
 }
-.consult .price .text strong {
-  font-weight: bold;
+.consult .price.wb {
+  border: none;
 }
-.consult .price a.btn {
+.consult .price .title {
+  text-transform: uppercase;
+  color: #434f74;
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+.consult .price .time {
+  font-size: 16px;
+  color: #6e96ff;
+  display: block;
+  margin-top: 10px;
   padding: 10px 0px;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  text-transform: uppercase;
+}
+.consult .price .money {
+  font-size: 28px;
+  font-weight: bold;
+  color: #6e96ff;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.consult .price .money strong {
+  font-size: 24px;
 }

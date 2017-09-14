@@ -1055,47 +1055,67 @@ header{
 }
 
 .consult{
+	.pmn !important;
 
-	.title{
-		font-size: 16px;
+	div.title{
+		padding: 40px 40px 20px;
+		border-bottom: 1px solid #f1f1f1;
+
+		h2{
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+
+		p{
+			margin-bottom: 10px;
+
+			strong{
+				font-weight: 600;
+			}
+		}
 	}
 
 	.price{
-		margin-top: 40px;
-		margin-bottom: 40px;
+		padding: 40px 40px 30px;
+		border-right: 1px solid #eee;
+		text-align: center;
+
+		&.wb{
+			border: none;
+		}
 
 		.title{
-			color: #fff;
-			padding: 10px 0px;
-			font-weight: bold;
-			font-size: 16px;
-			border-radius: 5px 5px 0px 0px;
-
-			&.min{
-				background: @deep-blue + 30%;
-			}
-
-			&.stand{
-				background: @deep-blue;
-			}
-
-			&.max{
-				background: @deep-blue - 30%;
-			}
+			text-transform: uppercase;
+			color: @blue;
+			font-weight: 600;
+			margin-top: 10px;
+			display: block;
+			margin-bottom: 20px;
+			font-size: 19px;
 		}
 
-		.text{
-			background: #f1f1f1;
-			padding: 20px 0px 10px;
-			text-align: center;
+		.time{
+			font-size: 16px;
+			color: @deep-blue;
+			display: block;
+			margin-top: 10px;
+			padding: 10px 0px;
+			border-top: 1px solid #f1f1f1;
+			border-bottom: 1px solid #f1f1f1;
+			text-transform: uppercase;
+		}
+
+		.money{
+			font-size: 28px;
+			font-weight: bold;
+			color: @deep-blue;
+			display: block;
+			margin-bottom: 20px;
+			margin-top: 10px;
 
 			strong{
-				font-weight: bold;
+				font-size: 24px;
 			}
-		}
-
-		a.btn{
-			padding: 10px 0px;
 		}
 	}
 }

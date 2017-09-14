@@ -1,9 +1,9 @@
 <?php
 /**
- * Custom Page (page-custom.php)
+ * Custom Page (page-consult.php)
  * @package WordPress
  * @subpackage Antares
- * Template Name: Custom Tamplate
+ * Template Name: Страница с консультациями
  */
 
 get_header(); ?>
@@ -12,55 +12,50 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 
+			<?php get_sidebar(); // подключаем sidebar.php ?>
 
-			<div class="col-sm-12 content">
+			<div class="<?php content_class_by_sidebar(); // функция подставит класс в зависимости от того есть ли сайдбар, лежит в functions.php ?> content">
 
 				<div class="slide">
-					<h1 class="pmn title text-center"><?php the_title();?></h1>
 					<ul class="breadcrumb">
 						<?php the_breadcrumb() ?>
 					</ul>
 				</div>
 
-				<div class="content-block">
-					<div class="content-wrapper">
-						<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('block page consult'); ?>> 
-								<div class="col-sm-10 col-sm-offset-1 text-center title">
-								Если вы хотите получить личную консультацию на тему веб-дизайна или верстки сайтов, то вы можете выбрать один из ниже предложенных вариантов по времени.
-								<br><br>Я готов ответить на все интересующие вас вопросы :)</div>
-								<div class="col-sm-4 price">
-									<div class="text-center title min">Минимум</div>
-									<div class="text">
-										<p>Продолжительность: <strong>1 час</strong></p>
-										<p>Цена: <strong>1500 руб.</strong></p>
-									</div>
-									<a class="btn btn-blue btn-block">Заказать</a>
-								</div>
+				<div class="content-block ">
+					<div class="content-wrapper consult pmn">
 
-								<div class="col-sm-4 price">
-									<div class="text-center title stand">Стандарт</div>
-									<div class="text">
-										<p>Продолжительность: <strong>2 час</strong></p>
-										<p>Цена: <strong>1500 руб.</strong></p>
-									</div>
-									<a class="btn btn-blue btn-block">Заказать</a>
-								</div>
+						<div class="col-sm-12 title">
+							<h2>Личная консультация по Skype</h2>
+							<p>Если у вас есть вопросы или вам нужна помощь в веб-дизайне или верстке сайтов, то я готов уделить вам свое время. <strong> Время можно разбивать на удобные для вас части.</strong></p>
 
-								<div class="col-sm-4 price">
-									<div class="text-center title max">Максимум</div>
-									<div class="text">
-										<p>Продолжительность: <strong>3 час</strong></p>
-										<p>Цена: <strong>1500 руб.</strong></p>
-									</div>
-									<a class="btn btn-blue btn-block">Заказать</a>
-								</div>
-								<div class="col-sm-10 col-sm-offset-1 title text-center">
-									Подбор удобного времени для консультации обсуждается с каждым лично. <br>Оставшееся время тратиться в другое время.
-								</div>
-								<div class="clearfix"></div>
-							</article>
-						<?php endwhile;?>
+						</div>
+						
+						<div class="col-sm-4 pmn price">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/start.png" alt="" class="img-responsive">
+							<span class="title">Минимум</span>
+							<span class="time">1 час</span>
+							<span class="money">1500 <strong>₽</strong></span>
+							<a href="#" class="btn btn-blue">Отправить заявку</a>
+						</div>
+						
+						<div class="col-sm-4 pmn price">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/basic.png" alt="" class="img-responsive">
+							<span class="title">Стандартная</span>
+							<span class="time">2 часа</span>
+							<span class="money">2800 <strong>₽</strong></span>
+							<a href="#" class="btn btn-blue">Отправить заявку</a>
+						</div>
+						
+						<div class="col-sm-4 pmn price wb">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/ultra.png" alt="" class="img-responsive">
+							<span class="title">Максимальная</span>
+							<span class="time">3 часа</span>
+							<span class="money">4000 <strong>₽</strong></span>
+							<a href="#" class="btn btn-blue">Отправить заявку</a>
+						</div>
+
+						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
@@ -68,4 +63,5 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+
 <?php get_footer();?>
