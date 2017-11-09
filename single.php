@@ -33,6 +33,22 @@ get_header(); // подключаем header.php ?>
 						
 					</div>
 							<?php the_content(); // контент ?>
+
+							<div class="form-subscrive">
+								<div class="form-subscrive-block clearfix">
+									<h3>Узнайте, какие 5 критических ошибок <br> не дают заработать новичку в Веб-дизайне</h3>
+									<h4>Получите доступ к БЕСПЛАТНОМУ видеокурсу от Сергея Тарасенко <br> (5 видеоуроков + 2 PDF-файла)</h4>
+
+									<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+										<div class="col-sm-4 pmn pr-20"><input type="text" class="form-control" name="name" placeholder="Имя" /></div>
+										<div class="col-sm-4 pmn pr-20"><input type="text" class="form-control" name="email" placeholder="E-mail" /></div>
+										<input type="hidden" name="campaign_token" value="nkNZY" />
+										<input type="hidden" name="thankyou_url" value="https://creade.ru/success"/>
+										<div class="col-sm-4 pmn"><input type="submit" class="btn btn-block" value="Получить доступ"/></div>
+									</form>
+								</div>
+							</div>
+
 							<div class="meta-block row">
 								<div class="meta col-sm-6 pmn">
 									<ul class="ul-ui ul-line">

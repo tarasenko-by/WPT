@@ -1008,6 +1008,47 @@ header .navbar ul li.active a {
   height: 16px;
   fill: #434f74;
 }
+.form-subscrive {
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+}
+.form-subscrive .form-subscrive-block {
+  background: url(../images/courses.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  color: #fff;
+  padding: 20px 20px 40px;
+  border-radius: 4px;
+}
+.form-subscrive .form-subscrive-block input {
+  border: none;
+}
+.form-subscrive .form-subscrive-block .pr-20 {
+  padding-right: 20px !important;
+}
+.form-subscrive .form-subscrive-block h3 {
+  text-align: center;
+  display: block;
+  font-size: 28px !important;
+  padding: 0px;
+  margin: 0px;
+}
+.form-subscrive .form-subscrive-block h4 {
+  font-size: 15px !important;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0px 0px;
+}
+.form-subscrive .form-subscrive-block .btn-block {
+  display: block;
+  width: 100%;
+  background: #f3e60f;
+  padding: 8px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
 /*============================================ 
 ==============================================
 ==============================================
