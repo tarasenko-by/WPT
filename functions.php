@@ -288,13 +288,6 @@ add_action('customize_register', function($customizer) {
 			'default' => ''
 		)
 	);
-	$customizer->add_control(
-		'social_network_twitter', array(
-			'label' => 'Twitter',
-			'section' => 'about_author',
-			'type' => 'text',
-		)
-	);
 
 	$customizer->add_setting(
 		'social_network_telegramm', array(
@@ -304,6 +297,18 @@ add_action('customize_register', function($customizer) {
 	$customizer->add_control(
 		'social_network_telegramm', array(
 			'label' => 'Telegramm',
+			'section' => 'about_author',
+			'type' => 'text',
+		)
+	);
+	$customizer->add_setting(
+		'social_network_dribbble', array(
+			'default' => ''
+		)
+	);
+	$customizer->add_control(
+		'social_network_dribbble', array(
+			'label' => 'Dribbble',
 			'section' => 'about_author',
 			'type' => 'text',
 		)

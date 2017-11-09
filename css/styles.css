@@ -488,6 +488,13 @@ header .navbar ul li.active a {
 .slide li.telegram:hover {
   background: #1ea6ea;
 }
+.slide li.dribbble {
+  background: #c32361;
+  transition: all 0.2s ease-in-out;
+}
+.slide li.dribbble:hover {
+  background: #e1417f;
+}
 .slide li.vk {
   background: #507299;
   transition: all 0.2s ease-in-out;

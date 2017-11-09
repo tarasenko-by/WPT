@@ -42,12 +42,8 @@ get_header(); ?>
 							<?php if ( get_theme_mod('social_network_telegramm', '') != '' ){ ?>
 							<li class="telegram"><a href="<?php echo get_theme_mod('social_network_telegramm'); ?>">Telegram</a></li>
 							<?php } ?>
-
-							<?php if ( get_theme_mod('social_network_fb', '') != '' ){ ?>
-							<li class="telegram"><a href="<?php echo  get_theme_mod('social_network_fb'); ?>">Faсebook</a></li>
-							<?php } ?>
-							<?php if ( get_theme_mod('social_network_twitter', '') != '' ){ ?>
-							<li class="telegram"><a href="<?php echo get_theme_mod('social_network_twitter'); ?>">Twitter</a></li>
+							<?php if ( get_theme_mod('social_network_dribbble', '') != '' ){ ?>
+							<li class="dribbble"><a href="<?php echo get_theme_mod('social_network_dribbble'); ?>">Dribbble</a></li>
 							<?php } ?>
 						</ul>
 					</div>
