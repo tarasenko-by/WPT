@@ -1,18 +1,18 @@
 <?php
 /**
- * Шаблон обычной страницы (page.php)
+ * Page template (page.php)
  * @package WordPress
- * @subpackage your-clean-template-3
+ * @subpackage Antares
  */
-get_header(); // подключаем header.php ?>
+get_header(); ?>
 
 <section>
 	<div class="container">
 		<div class="row">
 
-			<?php get_sidebar(); // подключаем sidebar.php ?>
+			<?php get_sidebar();?>
 
-			<div class="<?php content_class_by_sidebar(); // функция подставит класс в зависимости от того есть ли сайдбар, лежит в functions.php ?> content">
+			<div class="<?php content_class_by_sidebar();?> content">
 
 				<div class="slide">
 					<ul class="breadcrumb">
@@ -22,12 +22,12 @@ get_header(); // подключаем header.php ?>
 
 				<div class="content-block">
 					<div class="content-wrapper">
-						<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('block page'); ?>> <?php // контэйнер с классами и id ?>
-								<h1 class="pmn title"><?php the_title(); // заголовок поста ?></h1>
-								<?php the_content(); // контент ?>
+						<?php if ( have_posts() ) while ( have_posts() ) : the_post();?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class('block page'); ?>> 
+								<h1 class="pmn title"><?php the_title();?></h1>
+								<?php the_content();?>
 							</article>
-						<?php endwhile; // конец цикла ?>
+						<?php endwhile;?>
 					</div>
 				</div>
 			</div>
@@ -35,4 +35,4 @@ get_header(); // подключаем header.php ?>
 		</div>
 	</div>
 </section>
-<?php get_footer(); // подключаем footer.php ?>
+<?php get_footer();?>

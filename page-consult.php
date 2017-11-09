@@ -36,7 +36,7 @@ get_header(); ?>
 							<span class="title">Минимум</span>
 							<span class="time">1 час</span>
 							<span class="money">1500 <strong>₽</strong></span>
-							<a href="#" class="btn btn-blue">Отправить заявку</a>
+							<a href="http://creade.ru/contacts/" class="btn btn-blue">Отправить заявку</a>
 						</div>
 						
 						<div class="col-sm-4 pmn price">
@@ -44,7 +44,7 @@ get_header(); ?>
 							<span class="title">Стандартная</span>
 							<span class="time">2 часа</span>
 							<span class="money">2800 <strong>₽</strong></span>
-							<a href="#" class="btn btn-blue">Отправить заявку</a>
+							<a href="http://creade.ru/contacts/" class="btn btn-blue">Отправить заявку</a>
 						</div>
 						
 						<div class="col-sm-4 pmn price wb">
@@ -52,7 +52,7 @@ get_header(); ?>
 							<span class="title">Максимальная</span>
 							<span class="time">3 часа</span>
 							<span class="money">4000 <strong>₽</strong></span>
-							<a href="#" class="btn btn-blue">Отправить заявку</a>
+							<a href="http://creade.ru/contacts/" class="btn btn-blue">Отправить заявку</a>
 						</div>
 
 						<div class="clearfix"></div>
