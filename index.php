@@ -51,6 +51,8 @@ get_header(); ?>
 				</div>
 
 				<div class="content-block">
+					<?php include ("courses.php"); ?>
+
 					<div class="content-wrapper">
 
 						<h1><?php  //
